@@ -1,0 +1,37 @@
+<!-- 商品-横幅 -->
+<navigator class='goods-banner' url='{{more}}' wx:if='{{more}}'>
+  <custom-image src='{{banner}}' type='poster' class='goods-banner-image' />
+</navigator>
+
+<!-- 商品-滚动 -->
+<view class='goods-scroll' wx:if='{{data.length}}'>
+  <!-- 商品-列表 -->
+  <view class='goods-list'>
+    <!-- 商品-元素 -->
+    <navigator url='/pages/goods-detail/goods-detail?id={{item.id}}' class='goods-item' wx:for='{{data}}' wx:key='{{item.id}}'>
+      <!-- 商品-元素-封面 -->
+      <custom-image type='cover' class='goods-item-cover' src='{{item.thumb}}' />
+      <!-- 商品-元素-详情 -->
+      <view class='goods-item-detail'>
+        <!-- 商品-元素-标题 -->
+        <view class='goods-item-title'>{{item.name}}</view>
+        <!-- 商品-元素-价格 -->
+        <view class='goods-item-price'>
+          <!-- 商品-元素-价格-实价 -->
+          <view class='goods-item-price-real'>{{item.money}}</view>
+          <!-- 商品-元素-价格-标签价格 -->
+          <view class='goods-item-price-tag'>{{item.original}}</view>
+        </view>
+        <!-- 商品-元素-按钮 -->
+        <!-- <button class='goods-item-button'>分享赚:¥{{item.share_money}}</button> -->
+      </view>
+    </navigator>
+    <!-- 更多 -->
+    <navigator url='{{more}}' class='goods-more'>
+      <!-- 更多-图标 -->
+      <custom-image type='icon' class='goods-more-icon' src='/images/public/logo.png' />
+      <!-- 更多-文字 -->
+      <view class='goods-more-text'>查看更多</view>
+    </navigator>
+  </view>
+</view>

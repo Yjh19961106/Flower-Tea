@@ -1,0 +1,9 @@
+<!-- 面板 -->
+<view class='panel'>
+  <!-- 面板-标题 -->
+  <view class='panel-title'>{{title}}</view>
+  <!-- 面板-详情 -->
+  <view class='panel-detail'>
+    <slot></slot>
+  </view>
+</view>

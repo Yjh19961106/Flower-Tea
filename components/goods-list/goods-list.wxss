@@ -1,0 +1,60 @@
+:host {
+  display: block;
+}
+/* 商品-列表 */
+.goods-list {
+  /* margin-bottom: 20rpx; */
+}
+/* 商品-元素 */
+.goods-item {
+  /* margin: 20rpx 0; */
+}
+/* 商品-元素-详情 */
+.goods-item-detail {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding: 0 30rpx;
+  margin: 10rpx 0;
+}
+/* 商品-元素-封面 */
+.goods-item-cover {
+  width: 100%;
+  height: 400rpx;
+}
+/* 商品-元素-价格 */
+.goods-item-price {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  font-weight: bold;
+}
+.goods-item-price::after {
+  display: block;
+  font-weight: normal;
+  margin-top: 10rpx;
+  padding-top: 8rpx;
+  content: 'A SERES OF BEAUTFUL SION';
+  border-top: 2rpx solid #AAA;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+/* 商品-元素-菜单 */
+.goods-item-menu {
+  display: flex;
+}
+.goods-item-button {
+  color: #FFF;
+  height: 60rpx;
+  padding: 0;
+  width: 160rpx;
+  font-size: 24rpx;
+  background-color: var(--main);
+  border: none;
+}
+.goods-item-button::after {
+  display: none;
+}
+.goods-item-button:not(:first-of-type) {
+  margin-left: 20rpx;
+}

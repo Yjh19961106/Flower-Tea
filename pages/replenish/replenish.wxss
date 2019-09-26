@@ -1,0 +1,4 @@
+@import '../../utils/apply-list.wxss';
+#container {
+  min-height: 100vh;
+}

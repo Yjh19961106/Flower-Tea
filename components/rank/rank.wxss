@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+}
+
+/* 级别-图标 */
+.rank-icon {
+  width: 50rpx;
+  height: 50rpx;
+}

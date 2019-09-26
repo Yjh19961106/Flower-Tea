@@ -1,0 +1,12 @@
+<container id='container' binderror='init'>
+  <tab bindchange='tabChange' id='tab'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item wx:for='{{category.list}}' wx:key='{{index}}'>{{item.title}}{{item.count}}</tab-nav-item>
+    </tab-nav>
+    <tab-content id='tab-content'>
+      <tab-content-item wx:for='{{category.list}}' wx:key='{{index}}' slot='{{index}}'>
+        <group-list class='group-list' categoryId='{{item.id}}' userId='{{options.id}}' maxPage='{{options.maxPage}}' bindcount='getCount' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品详情",
+  "usingComponents": {
+    "cart": "/components/cart/cart",
+    "enter": "/components/enter/enter",
+    "goods-detail-panel": "/components/goods-detail-panel/goods-detail-panel",
+    "rich": "/components/rich/rich"
+  }
+}

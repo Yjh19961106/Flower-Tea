@@ -1,0 +1,22 @@
+<container class='container' binderror='init'>
+  <navigator url='/pages/goods-detail/goods-detail?id={{item.id}}' wx:for='{{list}}' wx:key='{{index}}' class='search-item'>
+    <!-- 搜索-元素-封面 -->
+    <custom-image class='search-item-cover' src='{{item.thumb}}' />
+    <!-- 搜索-元素-详情 -->
+    <view class='search-item-detail'>
+      <!-- 搜索-元素-标题 -->
+      <view class='search-item-title'>{{item.name}}</view>
+      <!-- 搜索-元素-标语 -->
+      <view class='search-item-slogan'>{{item.slogan}}</view>
+      <view class='search-item-wing'>
+        <!-- 搜索-元素-价格 -->
+        <view class='search-item-price'>
+          <!-- 搜索-元素-现价 -->
+          <view class='search-item-price-real'>现价:¥{{item.money}}</view>
+          <!-- 搜索-元素-原价 -->
+          <view class='search-item-price-tag'>原价:¥{{item.original}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</container>

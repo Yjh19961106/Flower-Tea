@@ -1,0 +1,8 @@
+<container id='container' binderror='init'>
+
+  <!-- 海报 -->
+  <canvas canvas-id='poster' id='poster'></canvas>
+
+  <!-- 保存 -->
+  <button class='custom-button' id='save' bindtap='saveImage'>保存图片</button>
+</container>

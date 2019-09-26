@@ -1,0 +1,58 @@
+<!--pages/integralShop/details/details.wxml-->
+<container id='container' binderror='init'>
+  <view>
+    <!-- 头部 -->
+    <view class="head">
+      <image src="/images/integralshop/details.png"></image>
+    </view>
+    <view class="headNum">{{userNum}}</view>
+    <view class="headShow">当前可用积分</view>
+  </view>
+  <!-- 选择 -->
+  <view class="chooseBar">
+    <!-- 日期 -->
+    <view class="section">
+      <picker bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}">
+        <view class="pickerItem">
+          <view class="picker">
+            {{array2[index1]}}
+          </view>
+          <view class="pickIcon">
+            <image src="/images/integralShop/check1.png"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <!-- 种类 -->
+    <view class="section">
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <view class="pickerItem">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+          <view class="pickIcon">
+            <image src="/images/integralShop/check.png"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <!-- 循环 -->
+  <view wx:for="{{userList}}" wx:key="{{index}}" class="userList" wx:if="{{userList.length != 0}}">
+    <view class="userScore" wx:if="{{item.type == '兑换商品'}}">-{{item.score}}积分</view>
+    <view class="userScore" wx:else>+{{item.score}}积分</view>
+    <view class="userType">{{item.type}}</view>
+  </view>
+
+
+  <view class="userList-no" wx:if="{{userList.length == 0}}">
+    <view class="userListImg">
+      <image src="/images/integralshop/none.png"></image>
+    </view>
+  </view>
+
+  <view>
+
+  </view>
+</container>

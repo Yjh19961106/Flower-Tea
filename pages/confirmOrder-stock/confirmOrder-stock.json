@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "usingComponents": {
+    "address": "/components/address/address",
+    "custom-radio": "/components/custom-radio/custom-radio",
+    "enter": "/components/enter/enter"
+  }
+}

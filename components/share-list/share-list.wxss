@@ -1,0 +1,81 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.custom-scroll {
+  height: 100%;
+}
+.container {
+  background-color: #FFF;
+}
+/* 分享-元素 */
+.share-item {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #CCC;
+}
+/* 分享-元素-头像 */
+.share-item-avatar {
+  flex-shrink: 0;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+/* 分享-元素-详情 */
+.share-item-detail {
+  flex: 1;
+}
+/* 分享-元素-底部 */
+.share-item-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+/* 分享-元素-标题 */
+.share-item-title {
+  flex: 1;
+  font-size: 32rpx;
+  color: #475989;
+  font-weight: bold;
+}
+/* 分享-元素-内容 */
+.share-item-content {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  display: block;
+}
+/* 分享-元素-图片 */
+.share-item-picture {
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* 分享-元素-视频 */
+.share-item-video {
+  margin: 0 20rpx;
+  height: 300rpx;
+}
+/* 分享-元素-时间 */
+.share-item-date {
+  font-size: 24rpx;
+  color: #6d6d6d;
+  flex: 1;
+}
+/* 分享-元素-按钮 */
+.share-item-button {
+  border-radius: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 0 25rpx;
+  margin-left: 15rpx;
+}
+.share-item-button-single {
+  background-color: #e2e2e5;
+  color: #4d4c4c;
+}
+.share-item-button-color {
+  background-color: var(--main);
+  color: #FFF;
+}

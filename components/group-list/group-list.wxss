@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.custom-scroll {
+  height: 100%;
+}
+.container {
+  min-height: 100%;
+  overflow: auto;
+  background-color: #F2F2F2;
+}
+
+/* 团队-元素 */
+.group-item {
+  height: 160rpx;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+/* 团队-元素-详情 */
+.group-item-detail {
+  flex: 1;
+  margin: 0 20rpx;
+  font-size: 24rpx;
+}
+.group-item-header, .group-item-footer {
+  display: flex;
+  justify-content: space-between;
+  color: #808080;
+}
+
+/* 团队-元素-昵称 */
+.group-item-nickname {
+  font-size: 28rpx;
+  color: #404040;
+  display: flex;
+  align-items: center;
+}
+/* 团队-元素-级别 */
+.group-item-rank {
+  margin-left: 10rpx;
+  width: 76rpx;
+  height: 26rpx;
+}
+/* 团队-元素-收入 */
+.group-item-price {
+  display: flex;
+}
+.group-item-price view {
+  color: #e95a6c;
+}

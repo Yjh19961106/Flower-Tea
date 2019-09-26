@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "微信授权",
+  "usingComponents": {
+    "custom-radio": "/components/custom-radio/custom-radio",
+    "custom-password": "/components/custom-password/custom-password"
+  }
+}

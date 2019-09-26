@@ -1,0 +1,61 @@
+#container {
+  min-height: 100vh;
+}
+/* 出库-元素 */
+.deliveryStock-item {
+  background-color: #F2F2F2;
+  margin: 20rpx;
+}
+/* 出库-元素-顶部 */
+.deliveryStock-item-header {
+  border-bottom: 2rpx solid #FFF;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  align-items: center;
+  height: 60rpx;
+  padding: 0 20rpx;
+}
+/* 出库-元素-中部 */
+.deliveryStock-item-body {
+  display: flex;
+  align-items: center;
+}
+/* 出库-元素-底部 */
+.deliveryStock-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40rpx;
+}
+/* 出库-元素-详情 */
+.deliveryStock-item-detail {
+  margin-right: 20rpx;
+  font-size: 24rpx;
+  flex: 1;
+  padding: 10rpx 0 ;
+}
+/* 出库-元素-封面 */
+.deliveryStock-item-cover {
+  width: 130rpx;
+  height: 130rpx;
+  margin: 20rpx;
+}
+/* 出库-元素-状态-完成 */
+.deliveryStock-item-status-resolve {
+  color: #396;
+}
+/* 出库-元素-状态-拒绝 */
+.deliveryStock-item-status-reject {
+  color: #FF6700;
+}
+/* 出库-元素-标题 */
+.deliveryStock-item-title {
+  font-weight: bold;
+  line-height: 40rpx;
+}
+/* 出库-元素-统计 */
+.deliveryStock-item-count {
+  line-height: 40rpx;
+  margin: 10rpx 0;
+}

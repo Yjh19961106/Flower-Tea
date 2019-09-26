@@ -1,0 +1,33 @@
+:host {
+  --size: 50rpx;
+
+  display: flex;
+  border-radius: 10rpx;
+  border: 2rpx solid #DDD;
+  overflow: hidden;
+  width: fit-content;
+  height: fit-content;
+}
+/* 统计-按钮 */
+.count-button {
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  font-size: 36rpx;
+  text-align: center;
+}
+.count-button.disabled {
+  color: #CCC;
+}
+/* 统计-数字 */
+.count-value {
+  width: calc(var(--size) * 1.5);
+  height: var(--size);
+  line-height: var(--size);
+  font-size: 24rpx;
+  text-align: center;
+  border-color: #DDD;
+  border-width: 2rpx;
+  border-left-style: solid;
+  border-right-style: solid;
+}

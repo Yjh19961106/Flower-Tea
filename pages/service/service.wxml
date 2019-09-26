@@ -1,0 +1,11 @@
+<container id='container' binderror='init'>
+
+  <!-- 服务-横幅 -->
+  <custom-image type='poster' class='service-banner' src='/images/service/banner.jpg' />
+
+  <!-- 服务-列表 -->
+  <service-list class='service-list' list='{{service.list}}' />
+
+  <!-- 服务-底部 -->
+  <view class='service-footer'>微客花茶客服微信，添加请备注微客花茶</view>
+</container>

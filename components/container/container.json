@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-loading": "/components/custom-loading/loading-type2/loading-type2"
+  }
+}

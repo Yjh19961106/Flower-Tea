@@ -1,0 +1,42 @@
+<container id='container' binderror='init'>
+  <!-- 物流-顶部 -->
+  <view class='logistical-header'>
+    <!-- 物流-顶部-图标 -->
+    <custom-image type='icon' class='logistical-header-icon' src='/images/order-detail/logistical.png' />
+    <!-- 物流-顶部-详情 -->
+    <view class='logistical-header-detail'>
+      <!-- 物流-顶部-标题 -->
+      <view class='logistical-header-title'>
+        快递公司：{{logistical.virtual_name}}
+      </view>
+      <!-- 物流-顶部-序号 -->
+      <view class='logistical-header-sn'>
+        快递号：{{logistical.virtual_sn}}
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 物流-中部 -->
+  <view class='logistical-body'>
+    <!-- 物流-中部-标题 -->
+    <view class='logistical-body-title'>物流信息</view>
+    <!-- 物流-列表 -->
+    <view class='logistical-list'>
+      <!-- 物流-元素 -->
+      <view class='logistical-item' wx:for='{{logistical.virtual}}' wx:key='{{index}}'>
+        <!-- 物流-元素-图标 -->
+        <view class='logistical-item-icon'>
+          <custom-image type='icon' src='/images/public/flow.png' />
+        </view>
+        <!-- 物流-元素-详情 -->
+        <view class='logistical-item-detail'>
+          <!-- 物流-元素-日期 -->
+          <view class='logistical-item-date'>{{item.scanDate}}</view>
+          <!-- 物流-元素-内容 -->
+          <view class='logistical-item-content'>{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</container>

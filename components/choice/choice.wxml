@@ -1,0 +1,4 @@
+<!-- 选择器-元素 -->
+<view class='choice-item {{value==index?"choice-item-active":""}}' wx:for='{{list}}' wx:key='{{index}}' bindtap='choice' data-index='{{index}}'>
+  {{item.title}}
+</view>

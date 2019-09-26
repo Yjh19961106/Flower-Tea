@@ -1,0 +1,76 @@
+<!-- 购物车-蒙版 -->
+<view class='cart-mask {{hidden?"hidden":""}}'>
+
+</view>
+<!-- 购物车-面板 -->
+<view class='cart-panel {{hidden?"hidden":""}}'>
+
+  <!-- 关闭按钮 -->
+  <view class='cart-close' bindtap='close'>
+    <image class='fill' src='./images/close.png' />
+  </view>
+
+  <!-- 表单 -->
+  <form class='cart-form' bindsubmit='submit'>
+
+    <!-- 商品 -->
+    <view class='goods'>
+      <!-- 商品-顶部 -->
+      <view class='goods-header'>
+        <!-- 商品-封面 -->
+        <custom-image type='cover' class='goods-cover' src='{{goods.thumb}}' />
+        <!-- 商品-详情 -->
+        <view class='goods-detail'>
+          <!-- 商品-价格 -->
+          <view class='goods-price' wx:if="{{goods.category_id != 20}}">{{goods.shoujia}}</view>
+          <view class='goods-price1' wx:if="{{goods.category_id == 20}}">{{goods.money}}积分</view>
+          <!-- 商品-标题 -->
+          <view class='goods-title'>{{goods.name}}</view>
+        </view>
+        <!-- 统计 -->
+        <count class='goods-count' bindchange='countChange' max='{{goods.can_buy_num}}' name='count' />
+      </view>
+      <!-- 商品-底部 -->
+      <view class='goods-footer'>
+        <!-- 已选 -->
+        <view class='goods-choice'>
+          已选择 {{goods.specs[specs].title}} 数量 {{count}} 件
+        </view>
+      </view>
+    </view>
+
+    <!-- 规格 -->
+    <view class="size">
+
+      <view class='cart-item'>
+        <view class='cart-item-title'>规格:</view>
+        <choice class='cart-item-content cart-specs' name='specs' list='{{goods.specs}}' bindchoice='specsChoice' />
+      </view>
+
+      <view wx:if="{{goods.postage != null}}">
+        快递运费：￥{{goods.postage}}
+      </view>
+      <view wx:if="{{goods.postage == null}}">
+        快递运费：包邮
+      </view>
+    </view>
+
+    <!-- 总价 -->
+    <view class='cart-item1'>
+      <view class='cart-item-title'>总价:</view>
+      <view class='cart-item-content cart-price1' wx:if="{{goods.category_id == 20&& goods.postage != null}}">{{goods.money}}积分+{{goods.postage}}元</view>
+      <view class='cart-item-content cart-price1' wx:if="{{goods.category_id == 20&& goods.postage == null}}">{{goods.money}}积分</view>
+      <view class='cart-item-content cart-price' wx:if="{{goods.category_id != 20}}">{{goods.shoujia}}</view>
+    </view>
+
+    <!-- 结算 -->
+    <view wx:if="{{login == null}}">
+      <button class='custom-button cart-button' bindtap="toastSth">去结算</button>
+    </view>
+
+    <view wx:else>
+      <button class='custom-button cart-button' form-type='submit'>去结算</button>
+    </view>
+
+  </form>
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "商品补货列表",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+  }
+}

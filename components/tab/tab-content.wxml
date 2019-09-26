@@ -1,0 +1,1 @@
+<slot wx:for='{{count}}' name='{{index}}' wx:key='{{index}}' wx:if='{{index==active}}'></slot>

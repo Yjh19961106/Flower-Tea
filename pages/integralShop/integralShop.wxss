@@ -1,0 +1,249 @@
+/* pages/integralShop/integralShop.wxss */
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  width: 100%;
+}
+
+.head2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.headImg {
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.headButton {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.headBtn1, .headBtn2 {
+  /* padding: 11rpx 21rpx; */
+  width: 200rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: white;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-top: 25rpx;
+}
+
+.headBtn1 {
+  border-bottom-right-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+}
+
+.headBtn2 {
+  border-bottom-left-radius: 30rpx;
+  border-top-left-radius: 30rpx;
+}
+
+.headTitle {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 38rpx;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.headNum {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  margin-top: 30rpx;
+}
+
+.headIcon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.headClick {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.clickImg {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 35rpx;
+}
+
+.headClickText {
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  margin-top: -100rpx;
+  color: rgba(130, 180, 160);
+}
+
+.getList {
+  margin-top: 120rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.getItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+.getImg {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.getBtn, .getBtn1,.getBtn2 {
+  width: 112rpx;
+  height: 52rpx;
+  background: #84b3a3;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  line-height: 52rpx;
+  border-radius: 26rpx;
+}
+.getBtn2 {
+  background: #9d9d9d;
+  color: white;
+}
+
+.getBtn1 {
+  background: white;
+  color: #9d9d9d;
+  border: 1rpx solid #9d9d9d;
+}
+
+.itemTitle {
+  font-size: 16px;
+  color: #242424;
+  font-weight: 600;
+}
+.itemTitle text {
+  color: rgb(187, 187, 187)
+}
+
+.itemMsg {
+  font-size: 16px;
+  color: #dd181d;
+  font-weight: 600;
+}
+
+.listOther {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 600rpx;
+  margin-bottom: 65rpx;
+}
+
+.line {
+  width: 100%;
+  height: 10rpx;
+  background: #e6e6e6;
+  margin-top: -30rpx;
+}
+
+.detailList {
+  width: 100%;
+}
+
+.detailItem {
+  margin: 26rpx 30rpx;
+  /* border: 1rpx solid black; */
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+  border-radius: 20rpx;
+ 
+}
+
+.detailImg {
+  /* margin: 26rpx 30rpx; */
+  width: fill-available;
+  height: 350rpx;
+  
+  /* background: red; */
+}
+.detailImg image {
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.detailOther {
+  /* margin: 26rpx 30rpx; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15rpx 15rpx;
+}
+
+.otherMoney {
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.othername {
+  line-height: 25rpx;
+}
+
+.otherLeft {
+  font-size: 16px;
+  color: #000;
+}
+
+.otherMoney {
+  line-height: 25rpx;
+  margin-top: 18rpx;
+}
+
+.otherMon {
+  color: #82b4a3;
+  font-size: 16px;
+}
+
+.otherOriginal {
+  color: #b4b4b4;
+  margin-left: 23rpx;
+  text-decoration: line-through;
+}
+
+.otherRight {
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  background: rgba(130, 180, 160);
+  border-radius: 25rpx;
+}

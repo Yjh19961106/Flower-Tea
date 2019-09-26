@@ -1,0 +1,40 @@
+<container binderror='init' id='container'>
+
+  <!-- 地址-列表 -->
+  <view class='address-list'>
+
+    <!-- 地址-元素 -->
+    <view class='address-item' wx:for='{{address.list}}' wx:key='{{item.id}}'>
+
+      <!-- 地址-元素-顶部 -->
+      <view class='address-item-header' bindtap='selectAddress' data-index='{{index}}'>
+        <!-- 地址-元素-详情 -->
+        <address class='address-item-detail' data='{{item}}' />
+        <!-- 地址-元素-图标 -->
+        <enter />
+      </view>
+
+      <!-- 地址-元素-底部 -->
+      <view class='address-item-footer'>
+        <!-- 地址-元素-默认 -->
+        <view class='address-item-default' bindtap='putDefault' data-index='{{index}}'>
+          <custom-radio value='{{item.status==1}}' readonly='{{true}}' /> 默认地址
+        </view>
+        <!-- 地址-元素-操作 -->
+        <view class='address-item-operation'>
+          <button class='button-clear address-item-operation-button' bindtap='putAddress' data-index='{{index}}'>
+            编辑
+          </button>
+          <button class='button-clear address-item-operation-button' bindtap='deleteAddress' data-index='{{index}}'>
+            删除
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 添加地址 -->
+  <view class='custom-button address-post' bindtap='postAddress'>
+    添加收货地址
+  </view>
+</container>

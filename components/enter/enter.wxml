@@ -1,0 +1,2 @@
+<view class='slot'><slot></slot></view>
+<view class='enter-container'>{{title}}<image class='enter-icon' mode='aspectFit' src='./images/enter-{{type}}.png'></image></view>

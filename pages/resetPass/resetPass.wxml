@@ -1,0 +1,52 @@
+<container id='container'>
+
+  <form bindsubmit='formSubmit'>
+
+    <!-- 表单 -->
+    <view class='form'>
+
+      <!-- 表单-顶部 -->
+      <view class='form-header'>
+        <!-- 表单-标志 -->
+        <custom-image type='icon' class='form-header-icon' src='/images/public/logo.png' />
+      </view>
+
+      <!-- 表单-中部 -->
+      <view class='form-body'>
+
+        <!-- 表单-列表 -->
+        <view class='form-list'>
+          <!-- 手机号 -->
+          <view class='form-item'>
+            <view class='form-item-scanner'>
+              <input name='phone' type='number' maxlength='11' placeholder='请输入手机号' />
+            </view>
+          </view>
+          <!-- 验证码 -->
+          <view class='form-item'>
+            <view class='form-item-scanner'>
+              <input name='captcha' type='number' maxlength='4' placeholder='请输入短信验证码' />
+            </view>
+            <button form-type='submit' data-submit='getCaptcha' class='button-clear form-item-button' wx:if='{{!captcha.status}}'>获取验证码</button>
+            <button class='button-clear form-item-button' wx:if='{{captcha.status}}'>{{captcha.countdown}}s</button>
+          </view>
+          <!-- 新密码 -->
+          <view class='form-item'>
+            <view class='form-item-scanner'>
+              <input name='password' type='password' maxlength='20' placeholder='请输入新密码' />
+            </view>
+          </view>
+          <!-- 确认密码 -->
+          <view class='form-item'>
+            <view class='form-item-scanner'>
+              <input name='confirmPassword' type='password' maxlength='20' placeholder='请再次输入密码' />
+            </view>
+          </view>
+        </view>
+
+        <!-- 表单-确认 -->
+        <button class='custom-button form-submit' data-submit='reset' form-type='submit'>完成</button>
+      </view>
+    </view>
+  </form>
+</container>

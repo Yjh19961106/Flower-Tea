@@ -1,0 +1,134 @@
+<wxs module="filter">
+  module.exports = {
+    price: function(value = 0) {
+      return value.toFixed(2)
+    }
+  }
+</wxs>
+<container id='container' binderror='init'>
+
+  <view class='section'>
+    <!-- 用户信息 -->
+    <view class='userInfo' wx:if='{{userInfo.id}}'>
+      <!-- 用户信息-头像 -->
+      <avatar class='userInfo-avatar' src='{{userInfo.avatar}}' />
+      <!-- 用户信息-详情 -->
+      <view class='userInfo-detail'>
+        <!-- 用户信息-顶部 -->
+        <view class='userInfo-header'>
+          <!-- 用户信息-昵称 -->
+          <view class='userInfo-nickname'>{{userInfo.nickname}}</view>
+          <!-- 用户信息-级别 -->
+          <view class='userInfo-rank' wx:if='{{userInfo.group_id >= 2}}'>
+            <custom-image type='icon' class='center fill' src='/images/userInfo/rank.png' />
+            <view>{{userInfo.group[userInfo.group_id - 2].name}}店主</view>
+          </view>
+        </view>
+        <!-- 用户信息-底部 -->
+        <view class='userInfo-footer'>
+          <view class='userInfo-footer-item'>ID:{{userInfo.userid}}</view>
+          <view class='userInfo-footer-item'>PHONE:{{userInfo.mobile}}</view>
+        </view>
+      </view>
+      <view class='userInfo-exit' bindtap='logout'>退出登录</view>
+    </view>
+    <!-- 用户信息 -->
+    <view class='userInfo' bindtap='login' wx:else>
+      <!-- 用户信息-头像 -->
+      <avatar class='userInfo-avatar' />
+      <!-- 用户信息-详情 -->
+      <view class='userInfo-detail'>
+        <view class='userInfo-login'>登录</view>
+      </view>
+    </view>
+
+    <!-- 资本-卡片 -->
+    <view class='capital'>
+      <!-- 资本-背景 -->
+      <custom-image type='cover' class='fill capital-background' src='/images/userInfo/capital.png' />
+      <!-- 资本-前景 -->
+      <view class='capital-foreground'>
+        <!-- 资本-标题 -->
+        <view class='capital-title'>累计收益
+          <custom-image type='icon' src='/images/userInfo/capital-title.png' />
+        </view>
+        <!-- 资本-收益 -->
+        <view class='capital-profit'>{{userInfo.income || 0}}</view>
+        <!-- 资本-立即提现 -->
+        <view class='capital-cashOut'>
+          <button class='button-clear capital-cashOut-button' bindtap='cashOut' style="color:black;">立即提现</button>
+        </view>
+        <!-- 资本-团队收益 -->
+        <!-- <navigator class='capital-teamSales' url='/pages/teamSales/teamSales'>
+          <custom-image type='icon' src='/images/userInfo/teamSales.png' />团队销售额
+          <enter type='white' />
+        </navigator> -->
+      </view>
+    </view>
+
+    <!-- 菜单-列表 -->
+    <view class='menu-list'>
+      <navigator url='{{item.url}}' class='menu-item' wx:for='{{menu.list}}' wx:key='{{index}}'>
+        <custom-image type='icon' class='menu-icon' src='{{item.icon}}' />
+        <view class='menu-title'>{{item.title}}</view>
+      </navigator>
+    </view>
+
+    <!-- 按钮-列表 -->
+    <view class='button-list'>
+      <navigator url='{{item.url}}' class='custom-button button-item' wx:for='{{button.list}}' wx:key='{{index}}' style=" color: #82b4a3;">{{item.title}}</navigator>
+    </view>
+
+
+  </view>
+
+  <view style="background:white;width:100%;">
+
+    <!-- 菜单-列表 -->
+    <view class='menu-list1'>
+      <view class='rank'>
+        <!-- 级别-标题 -->
+        <view class='rank-title'>我的称号</view>
+        <view class="rankItem">
+          <navigator url='{{item.url}}' class='menu-item' wx:for='{{menu.list2}}' wx:key='{{index}}'>
+            <custom-image type='icon' class='menu-icon' src='{{item.icon}}'  />
+            <view class='menu-title'>{{item.title}}</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <!-- 纵列-列表 -->
+  <!-- <view class='column-list'>
+    <navigator url='{{item.url}}' class='column-item' wx:for='{{column.list}}' wx:key='{{index}}'>
+      <custom-image type='icon' class='column-item-icon' src='{{item.icon}}' />
+      <view class='column-item-title {{userInfo.is_red_icon==1?"column-item-dot":""}}'>{{item.title}}</view>
+    </navigator>
+  </view> -->
+  <view class='section'>
+    <!-- 级别 -->
+    <view class='rank'>
+      <!-- 级别-标题 -->
+      <view class='rank-title'>我的称号</view>
+      <!-- 级别-列表 -->
+      <view class='rank-list'>
+        <!-- 级别-元素 -->
+        <view class='rank-item' wx:for='{{userInfo.group}}' wx:key='{{index}}'>
+          <!-- 已录用 -->
+          <block wx:if='{{userInfo.group_id >= index + 2}}'>
+            <custom-image type='icon' class='rank-item-icon' src='{{item.image}}' />
+            <view class='rank-item-title'>{{item.name}}已录用</view>
+          </block>
+          <!-- 未录用 -->
+          <block wx:else>
+            <custom-image type='icon' class='rank-item-icon' src='{{item.noimage}}' />
+            <view class='rank-item-title'>{{item.name}}未录用</view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</container>

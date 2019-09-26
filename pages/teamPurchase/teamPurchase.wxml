@@ -1,0 +1,31 @@
+<container id='container' binderror='init'>
+
+  <!-- 团队进货-总额 -->
+  <view class='teamPurchase-total'>
+    <!-- 团队进货-总额-标题 -->
+    <view class='teamPurchase-total-title'>团队进货总额</view>
+    <!-- 团队进货-总额-金额 -->
+    <view class='teamPurchase-total-price'>{{teamPurchase.total}}</view>
+  </view>
+
+  <!-- 团队进货-顶部 -->
+  <view class='teamPurchase-header'>
+    <view>年份</view>
+    <picker mode='date' fields='year' end='{{year.max}}' bindchange='yearChange'>
+      <view class='year'>
+        {{year.current}}<custom-image type='icon' class='year-more' src='/images/public/down.png' />
+      </view>
+    </picker>
+  </view>
+
+  <!-- 团队进货-列表 -->
+  <view class='teamPurchase-list'>
+    <!-- 团队进货-元素 -->
+    <navigator url='/pages/teamPurchase-detail/teamPurchase-detail?year={{year.current}}&month={{index + 1}}' class='teamPurchase-item' wx:for='{{teamPurchase.list}}' wx:key='{{index}}'>
+      <!-- 团队进货-元素-标题 -->
+      <view class='teamPurchase-item-title'>{{index + 1}}月销售额</view>
+      <!-- 团队进货-元素-金额 -->
+      <view class='teamPurchase-item-price'>{{item}}</view>
+    </navigator>
+  </view>
+</container>

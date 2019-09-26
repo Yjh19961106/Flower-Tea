@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/share/share",
+    "pages/mine/mine",
+    "pages/goods-list/goods-list",
+    "pages/goods-detail/goods-detail",
+    "pages/login/login",
+    "pages/phone/phone",
+    "pages/register/register",
+    "pages/resetPass/resetPass",
+    "pages/address-list/address-list",
+    "pages/address-form/address-form",
+    "pages/agreement/agreement",
+    "pages/teamSales/teamSales",
+    "pages/teamPurchase/teamPurchase",
+    "pages/teamPurchase-detail/teamPurchase-detail",
+    "pages/service/service",
+    "pages/group/group",
+    "pages/income-list/income-list",
+    "pages/order/order",
+    "pages/confirmOrder-normal/confirmOrder-normal",
+    "pages/confirmOrder-stock/confirmOrder-stock",
+    "pages/coupon/coupon",
+    "pages/poster/poster",
+    "pages/order-detail/order-detail",
+    "pages/post-comment/post-comment",
+    "pages/logistical/logistical",
+    "pages/transferRecord/transferRecord",
+    "pages/take/take",
+    "pages/take-apply/take-apply",
+    "pages/replenish/replenish",
+    "pages/deliveryStock/deliveryStock",
+    "pages/voucher/voucher",
+    "pages/deliveryStock-detail/deliveryStock-detail",
+    "pages/replenish-apply/replenish-apply",
+    "pages/replenish-apply-success/replenish-apply-success",
+    "pages/integralShop/integralShop",
+    "pages/integralShop/details/details",
+    "pages/rules/rules",
+    "pages/finish-list/finish-list",
+    "pages/extractList/extractList",
+    "pages/teamMessage/teamMessage"
+  ],
+  "tabBar": {
+    "selectedColor": "#404040",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/public/home.png",
+        "selectedIconPath": "images/public/home-active.png"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "text": "分享",
+        "iconPath": "images/public/share.png",
+        "selectedIconPath": "images/public/share-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/public/mine.png",
+        "selectedIconPath": "images/public/mine-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "custom-image": "/components/custom-image/custom-image",
+    "container": "/components/container/container"
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微客花茶",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

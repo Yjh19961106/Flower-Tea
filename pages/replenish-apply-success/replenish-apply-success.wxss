@@ -1,0 +1,40 @@
+#container {
+  min-height: 100vh;
+  background-color: #F2F2F2;
+  overflow: hidden;
+}
+
+
+/* 成功-面板 */
+.success-panel {
+  background-color: #FFF;
+  border-radius: 20rpx;
+  margin: 40rpx;
+  overflow: auto;
+}
+/* 成功-面板-图标 */
+.success-panel-icon {
+  margin: 50rpx auto;
+  display: block;
+  text-align: center;
+}
+/* 成功-面板-标题 */
+.success-panel-title {
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 40rpx;
+  margin: 30rpx auto;
+}
+
+
+/* 成功-面板-表格 */
+.success-panel-table {
+  width: 100%;
+  font-size: 28rpx;
+  margin: 20rpx auto;
+  line-height: 50rpx;
+}
+.success-panel-table td:first-of-type {
+  width: 200rpx;
+  text-align: right;
+}

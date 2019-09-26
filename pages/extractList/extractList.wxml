@@ -1,0 +1,15 @@
+<!--pages/extractList/extractList.wxml-->
+<container id='container' binderror='init'>
+  <view class="list">
+    <view class="item" wx:for="{{list}}" wx:key="{{index}}">
+      <view class="itemHead">
+        <view class="itemName">{{item.nickname}}</view>
+        <view class="itemType">{{item.withdraw_type}}</view>
+      </view>
+      <view class="itemFoot">
+        <view class="itemTime">提现时间: {{item.add_time}}</view>
+        <view class="itemMoney">提现金额：{{item.money}}元</view>
+      </view>
+    </view>
+  </view>
+</container>

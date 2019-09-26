@@ -1,0 +1,20 @@
+<!-- 商品 -->
+<view class='goods'>
+  <!-- 商品-封面 -->
+  <custom-image src='{{goods.thumb}}' class='goods-cover' />
+  <!-- 商品-详情 -->
+  <view class='goods-detail'>
+    <!-- 商品-标题 -->
+    <view class='goods-title'>
+      {{goods.name}}
+    </view>
+    <!-- 商品-分类 -->
+    <view class='goods-category'>
+      {{goods.category_name}}
+    </view>
+  </view>
+  <!-- 商品-统计 -->
+  <view class='goods-count'>
+    x{{goods.num}}
+  </view>
+</view>

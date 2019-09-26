@@ -1,0 +1,103 @@
+<container id='container' binderror='init'>
+  <view>
+    <!-- 头部背景 -->
+    <view class="head">
+      <view class="headImg">
+        <image src="/images/integralshop/background.png"></image>
+      </view>
+      <view class="head2">
+        <view class="headButton">
+          <view class="headBtn1" bindtap="linkToRules">签到规则</view>
+          <view class="headBtn2" bindtap="linkToDetail" wx:if="{{score_user !=null}}">积分明细</view>
+          <view class="headBtn2" bindtap="linkToDetail1" wx:else>积分明细</view>
+        </view>
+        <view class="headTitle">
+          当前拥有积分
+        </view>
+        <view class="headNum">
+          <view class="headIcon">
+            <image src="/images/integralshop/moneyIcon.png"></image>
+          </view>
+          <view wx:if="{{score_user != null}}">
+            {{score_user}}分
+          </view>
+          <view wx:else>0分</view>
+        </view>
+        <view class="headClick">
+          <view class="clickImg">
+            <image src="/images/integralshop/background2.png"></image>
+          </view>
+        </view>
+        <view class="headClickText" bindtap="signIn" wx:if="{{score_click == 1 &&score_user !=null}}">签到</view>
+        <view class="headClickText" bindtap="signIn3" wx:if="{{score_click == 1&&score_user ==null}}">签到</view>
+        <view class="headClickText" bindtap="signIn2" wx:if="{{score_click == 0}}">已签到</view>
+      </view>
+    </view>
+
+    <!-- 未完成领取 -->
+    <view>
+      <view class="getList">
+        <!-- 循环img -->
+        <view style="margin-top:-30rpx;">
+          <view style="width:100rpx;height:100rpx;padding:25rpx 0;" wx:for="{{imgList}}" wx:key="{{index}}">
+            <image src="{{item.img}}"></image>
+          </view>
+        </view>
+
+        <!-- 循环list -->
+        <view>
+
+          <view class="listOther" wx:for="{{msgList}}" wx:key="{{index}}">
+            <view style="margin-left:24rpx;">
+              <view class="itemTitle">{{item.name}}
+                <text wx:if="{{item.now_num > item.num}}">({{item.num}}/{{item.num}})</text>
+                <text wx:else>({{item.now_num}}/{{item.num}})</text>
+              </view>
+              <view class="itemMsg">+{{item.score}}/积分</view>
+            </view>
+
+            <view class="getBtn" wx:if="{{item.is_get == 1}}" data-mission_id="{{item.id}}" data-score="{{item.score}}" bindtap="getScore">
+              领取
+            </view>
+
+            <view class="getBtn1" wx:if="{{item.is_get == 0 && item.is_die == 0}}">
+              未完成
+            </view>
+
+            <view class="getBtn1" wx:if="{{item.is_get == 0 && item.is_die == null}}">
+              未完成
+            </view>
+
+            <view class="getBtn2" wx:if="{{item.is_get == 0 && item.is_die == 1}}">
+              已完成
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="line">
+    </view>
+    <!-- 商品列表 -->
+    <view class="detailList" wx:for="{{goods.list}}" wx:key="{{index}}">
+      <view class="detailItem">
+        <view class="detailImg" bindtap="linkToDetails" data-id="{{item.id}}">
+          <image src="{{item.thumb}}"></image>
+        </view>
+        <view class="detailOther">
+          <view class="otherLeft">
+            <view class="othername">{{item.name}}</view>
+            <view class="otherMoney">
+              <view class="otherMon">{{item.money}}积分</view>
+              <view class="otherOriginal">原价：￥{{item.original}}</view>
+            </view>
+          </view>
+          <view class="otherRight" bindtap="linkToDetails" data-id="{{item.id}}">立即兑换</view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</container>

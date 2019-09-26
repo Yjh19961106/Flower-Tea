@@ -1,0 +1,62 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<container id='container' binderror='init'>
+
+  <!-- 订单-状态 -->
+  <view class='order-status'>
+    {{filter.orderType(order.status)}}
+  </view>
+
+  <!-- 物流 -->
+  <view class='logistical' bindtap='logistical'>
+    <!-- 物流-图标 -->
+    <custom-image type='icon' class='logistical-icon' src='/images/order-detail/logistical.png' />
+    <!-- 物流-详情 -->
+    <view class='logistical-detail'>
+      <!-- 物流-日期 -->
+      <view class='logistical-date'>{{order.virtual.scanDate}}</view>
+      <!-- 物流-内容 -->
+      <view class='logistical-content'>{{order.virtual.desc}}</view>
+    </view>
+    <!-- 物流-进入 -->
+    <enter />
+  </view>
+
+  <!-- 地址 -->
+  <address class='address' data='{{address}}' />
+
+  <!-- 订单-详情 -->
+  <view class='order-detail'>
+
+    <!-- 订单-日期 -->
+    <view class='order-date'>{{filter.date(order.createtime)}}</view>
+
+    <!-- 订单商品 -->
+    <order-goods goods='{{item}}' wx:for='{{goods}}' wx:key='{{index}}' />
+
+    <!-- 订单设置-列表 -->
+    <view class='orderPanel-list'>
+      <!-- 订单设置-运费 -->
+      <view class='orderPanel-item'>
+        <view class='orderPanel-item-title'>快递运费</view>
+        <view class='orderPanel-item-content'>¥{{order.postage}}</view>
+      </view>
+      <!-- 订单设置-合计 -->
+      <view class='orderPanel-item'>
+        <view class='orderPanel-item-title'>价格合计</view>
+        <view class='orderPanel-item-content orderPanel-item-price'>{{order.money}}</view>
+      </view>
+      <!-- 订单设置-支付方式 -->
+      <view class='orderPanel-item'>
+        <view class='orderPanel-item-title'>支付方式</view>
+        <view class='orderPanel-item-content'>{{filter.payType(order.paytype)}}</view>
+      </view>
+    </view>
+
+    <!-- 订单页面底部 -->
+    <view class='order-footer'>
+      <view class='order-footer-item'>订单编号: {{order.order_id}}</view>
+      <view class='order-footer-item'>付款时间: {{order.status==0?"--":filter.date(order.paytime)}}</view>
+      <view class='order-footer-item'>买家留言: {{order.other}}</view>
+    </view>
+  </view>
+</container>

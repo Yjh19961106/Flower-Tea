@@ -1,0 +1,24 @@
+<container class='container' binderror='init'>
+  <navigator url='/pages/goods-detail/goods-detail?id={{item.id}}' wx:for='{{list}}' wx:key='{{index}}' class='discount-item'>
+    <!-- 封面 -->
+    <custom-image class='discount-item-cover' src='{{item.thumb}}' />
+    <!-- 详情 -->
+    <view class='discount-item-detail'>
+      <!-- 标题 -->
+      <view class='discount-item-title'>{{item.name}}</view>
+      <!-- 标语 -->
+      <view class='discount-item-slogan'>{{item.slogan}}</view>
+      <view class='discount-item-wing'>
+        <!-- 价格 -->
+        <view class='discount-item-price'>
+          <!-- 现价 -->
+          <view class='discount-item-price-real'>现价:¥{{item.money}}</view>
+          <!-- 原价 -->
+          <view class='discount-item-price-tag'>原价:¥{{item.original}}</view>
+        </view>
+        <!-- 按钮 -->
+        <view class='discount-item-button'>领取福利</view>
+      </view>
+    </view>
+  </navigator>
+</container>

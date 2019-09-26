@@ -1,0 +1,67 @@
+<!--pages/finish-list/finish-list.wxml-->
+<container id='container' binderror='init'>
+  <view class="head">
+    <view class="headTitle">营业额（元）</view>
+    <view class="headMoney">{{money_sum}}</view>
+
+    <view class="chooseBar">
+      <!-- 日期 -->
+      <view class="section">
+        <picker bindchange="bindPickerChange2" value="{{index}}" range="{{array2}}">
+          <view class="pickerItem">
+            <view class="picker">
+              {{array2[index1]}}年
+            </view>
+            <view class="pickIcon">
+              <image src="/images/integralShop/down.png"></image>
+            </view>
+          </view>
+        </picker>
+      </view>
+      <!-- 种类 -->
+      <view class="section">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="pickerItem">
+            <view class="picker">
+              {{array[index]}}月
+            </view>
+            <view class="pickIcon">
+              <image src="/images/integralShop/down.png"></image>
+            </view>
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <!-- 循环列表/ -->
+  <view wx:for="{{list}}" wx:key="{{index}}" class="item" wx:if="{{list.length != 0}}">
+    <view class="itemHead">
+      <view class="itemUserImg">
+        <image src="{{item.avatar}}"></image>
+      </view>
+      <view class="itemNickName">{{item.nickname}}</view>
+    </view>
+    <view class="itemCard">
+      <view class="itemCardImg">
+        <image src="{{item.goods_thumb}}"></image>
+      </view>
+      <view class="itemCardOther">
+        <view class="itemCardName">{{item.goods_name}}</view>
+        <view class="itemCardSlogan">{{item.slogan}}</view>
+        <view class="itemCardNum">X{{item.buy_num}}</view>
+      </view>
+    </view>
+    <!-- 时间 -->
+    <view class="itemFoot">
+      <view class="itemTime">{{item.createtime}}</view>
+      <view class="itemMsg">共{{item.buy_num}}件商品 合计:
+        <text>￥{{item.money}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{list.length == 0}}" class="showNo">
+    <image src="/images/integralShop/none.png"></image>
+  </view>
+</container>

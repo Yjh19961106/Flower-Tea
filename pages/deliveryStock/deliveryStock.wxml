@@ -1,0 +1,52 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<wxs module="pageFilter">
+  module.exports = {
+    /**
+     * 类型
+     */
+    status: function(value) {
+      if (value == 1) {
+        return '待审核'
+      } else if (value == 2) {
+        return '已完成'
+      } else if (value == 3) {
+        return '已驳回'
+      }
+    }
+  }
+</wxs>
+<container id='container' binderror='init'>
+  <!-- 出库-元素 -->
+  <view bindtap='detail' class='deliveryStock-item' wx:for='{{stock.list}}' wx:key='{{index}}' data-index='{{index}}'>
+    <!-- 出库-元素-顶部 -->
+    <view class='deliveryStock-item-header'>
+      <!-- 出库-元素-日期 -->
+      <view class='deliveryStock-item-date'>{{filter.date(item.create_time)}}</view>
+      <!-- 出库-元素-状态 -->
+      <view wx:if='{{item.status==1}}' class='deliveryStock-item-status'>待审核</view>
+      <!-- 出库-元素-状态 -->
+      <view wx:elif='{{item.status==2}}' class='deliveryStock-item-status deliveryStock-item-status-resolve'>已完成</view>
+      <!-- 出库-元素-状态 -->
+      <view wx:elif='{{item.status==3}}' class='deliveryStock-item-status deliveryStock-item-status-reject'>已驳回</view>
+    </view>
+    <!-- 出库-元素-中部 -->
+    <view class='deliveryStock-item-body'>
+      <!-- 出库-元素-封面 -->
+      <custom-image class='deliveryStock-item-cover' src='{{item.thumb}}' />
+      <!-- 出库-元素-详情 -->
+      <view class='deliveryStock-item-detail'>
+        <!-- 出库-元素-标题 -->
+        <view class='deliveryStock-item-title'>{{item.go_name}}</view>
+        <!-- 出库-元素-数量 -->
+        <view class='deliveryStock-item-count'>数量:{{item.num}}</view>
+        <!-- 出库-元素-底部 -->
+        <view class='deliveryStock-item-footer'>
+          <!-- 出库-元素-申请人 -->
+          <view class='deliveryStock-item-applicant'>我是{{item.re_name}}</view>
+          <!-- 出库-元素-进入 -->
+          <enter title='查看' />
+        </view>
+      </view>
+    </view>
+  </view>
+</container>

@@ -1,0 +1,44 @@
+:host {
+  display: block;
+}
+
+
+
+/* 商品-元素 */
+.goods-item {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+/* 商品-元素-详情 */
+.goods-item-detail {
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding-right: 100rpx;
+}
+/* 商品-元素-底部 */
+.goods-item-footer {
+  display: flex;
+  justify-content: space-between;
+}
+/* 商品-元素-封面 */
+.goods-item-cover {
+  width: 170rpx;
+  height: 170rpx;
+}
+/* 商品-元素-标题 */
+.goods-item-title {
+}
+/* 商品-元素-价格 */
+.goods-item-price {
+  display: flex;
+  align-items: baseline;
+  color: var(--main);
+}
+.goods-item-price::before{
+  content: '¥'
+}

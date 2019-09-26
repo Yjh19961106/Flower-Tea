@@ -1,0 +1,46 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<container class='container' binderror='init'>
+  <!-- 订单-元素 -->
+  <view class='order-item' wx:for='{{list}}' wx:key='{{index}}'>
+
+    <navigator url='/pages/order-detail/order-detail?id={{item.id}}'>
+      <!-- 订单-元素-顶部 -->
+      <view class='order-item-header'>
+        <!-- 订单-元素-日期 -->
+        <view class='order-item-date'>
+          <custom-image type='icon' src='/images/public/date.png' />{{filter.date(item.createtime)}}
+        </view>
+        <!-- 订单-元素-状态 -->
+        <view class='order-item-status'>
+          {{filter.orderType(item.status)}}
+        </view>
+      </view>
+
+      <!-- 商品 -->
+      <order-goods goods='{{item}}' wx:for='{{item.goods}}' wx:key='{{index}}' />
+
+      <!-- 订单-元素-中部 -->
+      <view class='order-item-body'>
+        共 {{item.num_all}} 件商品 合计：
+        <view class='order-item-price'>{{item.money}}</view>
+      </view>
+    </navigator>
+
+    <!-- 订单-元素-底部 -->
+    <view class='order-item-footer'>
+      <!-- 订单-元素-说明 -->
+      <view class='order-item-explain'></view>
+      <!-- 菜单-列表 -->
+      <view class='menu-list'>
+        <view class='menu-item' bindtap='payOrder' data-id='{{item.id}}' wx:if='{{item.status==0}}'>立即支付</view>
+        <view class='menu-item' bindtap='deleteOrder' data-id='{{item.id}}' wx:if='{{item.status==0}}'>取消订单</view>
+        <view class='menu-item' wx:elif='{{item.status==1}}'>待发货</view>
+        <block wx:elif='{{item.status==2}}'>
+          <navigator class='menu-item' url='/pages/logistical/logistical?id={{item.id}}'>查询物流</navigator>
+          <view class='menu-item' bindtap='putOrder' data-id='{{item.id}}'>确认收货</view>
+        </block>
+        <!-- <view class='menu-item' bindtap='postComment' data-index='{{index}}' wx:if='{{item.status==6}}'>去评价</view> -->
+      </view>
+    </view>
+  </view>
+</container>

@@ -1,0 +1,33 @@
+<container id='container' binderror='init'>
+  <tab bindchange='tabChange' id='tab'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item bindtap="getLv" wx:for='{{category.list}}' wx:key='{{index}}' data-lv="{{item.lv}}">{{item.title}}{{item.count}}</tab-nav-item>
+    </tab-nav>
+    <tab-content id='tab-content'>
+      <tab-content-item wx:for='{{category.list}}' wx:key='{{index}}' slot='{{index}}'>
+        <!-- <group-list class='group-list' categoryId='{{item.id}}' userId='{{options.id}}' maxPage='{{options.maxPage}}' bindcount='getCount' /> -->
+        <view wx:for="{{goodsList}}" wx:key="{{index}}" class="item">
+          <view class="itemHead">
+            <view class="itemTime">注册时间:{{item.createtime}}</view>
+            <view class="ItemPh">PH:{{item.mobile}}</view>
+          </view>
+          <view class="itemBody">
+            <view class="itemOther">
+              <view class="itemImg">
+                <image src="{{item.avatar}}"></image>
+              </view>
+              <view class="itemMsg">
+                <view class="itemName">{{item.nickname}}</view>
+                <view class="itemLv">{{item.user_group_name}}</view>
+                <view class="itemNum">成员{{item.child_child_count}}人</view>
+              </view>
+            </view>
+            <view class="itemMoney">
+              总收益：{{item.child_child_money}}
+            </view>
+          </view>
+        </view>
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

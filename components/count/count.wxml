@@ -1,0 +1,6 @@
+<!-- 减少 -->
+<view class='count-button {{disabled.min?"disabled":""}}' bindtap='decrease' bindlongpress='superDecreaseStart' bindtouchend='superDecreaseStop'>－</view>
+<!-- 结果 -->
+<view class='count-value'>{{value}}</view>
+<!-- 增加 -->
+<view class='count-button {{disabled.max?"disabled":""}}' bindtap='increase' bindlongpress='superIncreaseStart' bindtouchend='superIncreaseStop'>＋</view>

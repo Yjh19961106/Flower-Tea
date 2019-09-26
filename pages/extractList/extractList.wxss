@@ -1,0 +1,39 @@
+/* pages/extractList/extractList.wxss */
+#container {
+  min-height: 100vh;
+}
+page {
+  background: rgb(242, 242, 242);
+}
+
+.list {
+  padding: 30rpx 25rpx;
+  width: fill_available;
+}
+
+.item {
+  background: white;
+  padding: 15rpx;
+  margin-bottom: 15rpx;
+}
+.itemHead ,.itemFoot{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 40rpx;
+}
+.itemName {
+  font-size: 22px;
+  font-weight: 600
+}
+.itemType {
+  color: #9d9d9d;
+}
+.itemFoot {
+  margin-top: 18rpx;
+  font-size: 14px;
+}
+.itemMoney {
+  color: rgb(238, 56,56)
+}

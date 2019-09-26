@@ -1,0 +1,23 @@
+<container id='container' binderror='init'>
+  <view class='success-panel'>
+    <icon class='success-panel-icon' type='success' size='100rpx' />
+    <view class='success-panel-title'>补货申请成功（待审核）</view>
+  </view>
+  <view class='success-panel'>
+    <view class='success-panel-title'>请联系代理商审核申请</view>
+    <table class='success-panel-table'>
+      <tr>
+        <td>代理商等级：</td>
+        <td>{{apply.group}}</td>
+      </tr>
+      <tr>
+        <td>代理商姓名：</td>
+        <td>{{apply.name}}</td>
+      </tr>
+      <tr>
+        <td>代理商电话：</td>
+        <td>{{apply.phone}}</td>
+      </tr>
+    </table>
+  </view>
+</container>

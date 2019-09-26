@@ -1,0 +1,12 @@
+<container id='container' binderror='init'>
+  <tab bindchange='tabChange' id='tab'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item wx:for='{{category.list}}' wx:key='{{index}}'>{{item.title}}</tab-nav-item>
+    </tab-nav>
+    <tab-content>
+      <tab-content-item wx:for='{{category.list}}' wx:key='{{index}}'>
+        <coupon-list class='coupon-list' categoryId='{{item.id}}' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

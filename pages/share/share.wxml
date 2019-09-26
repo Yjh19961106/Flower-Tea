@@ -1,0 +1,19 @@
+<container id='container' binderror='init'>
+
+  <!-- 横幅 -->
+  <!-- <view bindtap='poster' class='banner'>
+    <custom-image type='cover' class='fill' src='{{banner}}' />
+  </view> -->
+
+  <!-- 分类分享 -->
+  <tab bindchange='tabChange' id='tab'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item wx:for='{{category.list}}' wx:key='{{index}}'>{{item.name}}</tab-nav-item>
+    </tab-nav>
+    <tab-content id='tab-content'>
+      <tab-content-item wx:for='{{category.list}}' wx:key='{{index}}' slot='{{index}}'>
+        <share-list class='share-list' categoryId='{{item.id}}' bindbanner='getBanner' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

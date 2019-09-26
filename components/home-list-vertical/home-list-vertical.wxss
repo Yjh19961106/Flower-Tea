@@ -1,0 +1,83 @@
+:host {
+  display: block;
+}
+/* 商品-列表 */
+.goods-list {
+  /* margin-bottom: 20rpx; */
+}
+/* 商品-元素 */
+.goods-item {
+  margin: 20rpx 0;
+}
+/* 商品-元素-底部 */
+.goods-item-footer {
+  display: flex;
+  align-items: center;
+}
+/* 商品-元素-详情 */
+.goods-item-detail {
+  flex-grow: 1;
+  width: 0;
+}
+/* 商品-元素-封面 */
+.goods-item-cover {
+  width: 100%;
+  height: 400rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+/* 商品-元素-价格 */
+.goods-item-price {
+  margin: 10rpx 0;
+  height: 40rpx;
+  display: flex;
+  align-items: flex-end;
+}
+/* 商品-元素-价格-真实价格 */
+.goods-item-price-real {
+  color: var(--main);
+  font-size: 32rpx;
+}
+/* 商品-元素-价格-标签价格 */
+.goods-item-price-tag {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-decoration: line-through;
+}
+/* 商品-元素-介绍 */
+.goods-item-slogan {
+  margin: 10rpx 0;
+  border-top: 2rpx solid #CCC;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* 商品-元素-菜单 */
+.goods-item-menu {
+  display: flex;
+  flex-shrink: 0;
+}
+.goods-item-button {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 160rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  background-color: #FFF;
+  color: var(--main);
+  border: 2rpx solid var(--main);
+}
+.goods-item-button::after {
+  display: none;
+}
+.goods-item-button:not(:first-of-type) {
+  margin-left: 20rpx;
+}

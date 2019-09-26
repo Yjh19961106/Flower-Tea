@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "上传凭证",
+  "usingComponents": {
+    "chosePicture": "/components/chosePicture/chosePicture"
+  }
+}

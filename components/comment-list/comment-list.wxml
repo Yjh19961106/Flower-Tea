@@ -1,0 +1,34 @@
+<wxs module="filter">
+  module.exports = {
+    limit: function(list, limit) {
+      return list.slice(0, limit)
+    }
+  }
+</wxs>
+<!-- 评论-元素 -->
+<view class='comment-item' wx:for='{{filter.limit(list, limit)}}' wx:key='{{index}}'>
+  <!-- 用户信息 -->
+  <view class='userInfo'>
+    <!-- 用户信息-头像 -->
+    <avatar class='userInfo-avatar' src='{{item.avatar}}' />
+    <!-- 用户信息-详情 -->
+    <view class='userInfo-detail'>
+      <!-- 用户信息-昵称 -->
+      <view class='userInfo-nickname'>{{item.nickname}}</view>
+      <!-- 用户信息-评级 -->
+      <view class='userInfo-grade'>
+        <image class='userInfo-grade-item' wx:for='{{item.star}}' wx:key='{{index}}' src='./images/grade.png' />
+      </view>
+    </view>
+    <!-- 用户信息-评论日期 -->
+    <view class='userInfo-datetime'>{{item.createtime}}</view>
+  </view>
+  <!-- 评论-详情 -->
+  <view class='comment-detail'>{{item.comment}}</view>
+  <!-- 商品-信息 -->
+  <view class='goods-detail'>
+    <view class='goods-detail-item'>购买:{{item.spec}}</view>
+    <view class='goods-detail-item'>数量:{{item.ordernum}}</view>
+    <view class='goods-detail-item'>{{item.ordertime}}</view>
+  </view>
+</view>

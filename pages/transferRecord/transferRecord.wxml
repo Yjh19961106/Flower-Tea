@@ -1,0 +1,17 @@
+<container id='container' binderror='init'>
+  <tab bindchange='tabChange' id='tab'>
+    <tab-nav id='tab-nav'>
+      <tab-nav-item wx:for='{{category.list}}' wx:key='{{index}}'>{{item.title}}</tab-nav-item>
+    </tab-nav>
+    <tab-content>
+      <tab-content-item>
+        <!-- 出货记录 -->
+        <shmentRecord-list class='transferRecord-list' />
+      </tab-content-item>
+      <tab-content-item>
+        <!-- 补货记录 -->
+        <replenishRecord-list class='transferRecord-list' />
+      </tab-content-item>
+    </tab-content>
+  </tab>
+</container>

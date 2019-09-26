@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "客服",
+  "usingComponents": {
+    "service-list": "/components/service-list/service-list"
+  }
+}

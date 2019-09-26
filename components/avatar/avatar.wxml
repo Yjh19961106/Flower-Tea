@@ -1,0 +1,1 @@
+<image class='avatar' mode='aspectFill' src='{{src || defaultSrc}}'></image>

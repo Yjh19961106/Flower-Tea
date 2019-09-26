@@ -1,0 +1,46 @@
+<!-- 购物车-蒙版 -->
+<view class='cart-mask {{hidden?"hidden":""}}'>
+
+</view>
+<!-- 购物车-面板 -->
+<view class='cart-panel {{hidden?"hidden":""}}'>
+
+  <!-- 关闭按钮 -->
+  <view class='cart-close' bindtap='close'>
+    <image class='fill' src='./images/close.png' />
+  </view>
+
+  <!-- 表单 -->
+  <form class='cart-form' bindsubmit='submit'>
+
+    <table>
+      <!-- 购物车标题 -->
+      <caption class='cart-title'>确认订单</caption>
+
+      <!-- 购物车数据 -->
+      <tbody>
+        <tr>
+          <td>产品名称：</td>
+          <td>{{goods.name}}</td>
+        </tr>
+        <tr>
+          <td>规格：</td>
+          <td>{{goods.guige}}</td>
+        </tr>
+        <tr>
+          <td>补货数量：</td>
+          <td>{{apply.count}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 上传凭证 -->
+    <view class='cart-voucher'>
+      <view class='cart-voucher-title'>请上传支付凭证（必填）</view>
+      <chosePicture class='cart-voucher-chose' name='voucher' />
+    </view>
+
+    <!-- 结算 -->
+    <button class='custom-button cart-button' form-type='submit'>确定</button>
+  </form>
+</view>

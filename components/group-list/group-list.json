@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar",
+    "custom-scroll": "/components/custom-scroll/custom-scroll",
+    "enter": "/components/enter/enter"
+  }
+}

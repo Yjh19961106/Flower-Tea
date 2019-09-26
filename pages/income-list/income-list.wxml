@@ -1,0 +1,60 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<wxs module="pageFilter">
+  module.exports = {
+    /**
+     * 类型
+     */
+    type: function(value) {
+      if (value == 1) {
+        return '高管分润'
+      } else if (value == 2) {
+        return '提成分润'
+      } else if (value == 3) {
+        return '同级分润'
+      } else if (value == 4) {
+        return '押金返还'
+      } else if (value == 5) {
+        return '业绩奖励'
+      } else if (value == 6) {
+        return '店主招募'
+      } else if (value == 7) {
+        return '创始人奖'
+      } else if (value == 8) {
+        return '礼包补贴'
+      }
+    }
+  }
+</wxs>
+<container id='container' binderror='init'>
+
+  <!-- 收益-列表 -->
+  <view class='income-list'>
+    <!-- 收益-元素 -->
+    <view class='income-item' wx:for='{{income.list}}' wx:key='{{index}}'>
+      <!-- 收益-元素-顶部 -->
+      <view class='income-item-header'>
+        <!-- 收益-元素-类型 -->
+        <view class='income-item-type'>{{pageFilter.type(item.income_type)}}</view>
+        <!-- 收益-元素-电话 -->
+        <view class='income-item-phone'>{{item.mobile || ''}}</view>
+        <!-- 收益-元素-时间 -->
+        <view class='income-item-date'>{{filter.date(item.add_time)}}</view>
+      </view>
+      <!-- 收益-元素-底部 -->
+      <view class='income-item-footer'>
+        <!-- 收益-元素-封面 -->
+        <custom-image type='cover' class='income-item-cover' src='{{item.goods_thumb}}' />
+        <!-- 收益-元素-详情 -->
+        <view class='income-item-detail'>
+          <!-- 收益-元素-标题 -->
+          <view class='income-item-title'>{{item.goods_name || ''}}</view>
+          <!-- 收益-元素-金额 -->
+          <view class='income-item-price'>
+            销售利润：
+            <view>{{item.money}}元</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</container>

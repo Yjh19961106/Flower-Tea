@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  height: auto;
+  background-color: #F2F2F2;
+}
+/* 订单-列表 */
+.order-list {
+  height: 100%;
+  background-color: #F2F2F2;
+}
+/* 订单-元素 */
+.order-item {
+  margin: 10rpx 0;
+  background-color: #FFF;
+}
+/* 订单-元素-顶部 */
+.order-item-header {
+  display: flex;
+  height: 70rpx;
+  align-items: center;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+/* 订单-元素-中部 */
+.order-item-body {
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #AAA;
+  display: flex;
+  justify-content: flex-end;
+}
+/* 订单-元素-底部 */
+.order-item-footer {
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+  font-size: 24rpx;
+  padding: 0 20rpx;
+  border-top: 2rpx solid #F2F2F2;
+  justify-content: space-between;
+}
+/* 订单-元素-日期 */
+.order-item-date {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.order-item-date custom-image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+/* 订单-元素-金额 */
+.order-item-price {
+  color: #F00;
+}
+.order-item-price::before {
+  content: "¥"
+}
+
+
+
+/* 菜单-列表 */
+.menu-list {
+  display: flex;
+}
+/* 菜单-元素 */
+.menu-item {
+  border: 2rpx solid currentColor;
+  color: var(--main);
+  border-radius: 25rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0 25rpx;
+  margin-left: 20rpx;
+}

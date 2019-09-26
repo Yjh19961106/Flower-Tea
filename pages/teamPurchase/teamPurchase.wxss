@@ -1,0 +1,68 @@
+#container {
+  min-height: 100vh;
+}
+/* 团队进货-总额 */
+.teamPurchase-total {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 60rpx;
+  height: 250rpx;
+  justify-content: space-between;
+}
+/* 团队进货-总额-标题 */
+.teamPurchase-total-title {
+  font-size: 32rpx;
+  text-align: center;
+}
+/* 团队进货-总额-金额 */
+.teamPurchase-total-price {
+  font-size: 48rpx;
+  color: #d00914;
+  text-align: center;
+}
+.teamPurchase-total-price::before {
+  content: '¥';
+  font-size: 32rpx;
+}
+
+/* 团队进货-顶部 */
+.teamPurchase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  background-color: #F2F2F2;
+  font-size: 32rpx;
+  height: 80rpx;
+}
+/* 年份 */
+.year {
+  display: flex;
+  align-items: center;
+}
+/* 年份-更多 */
+.year-more {
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 团队进货-列表 */
+.teamPurchase-list {
+  
+}
+/* 团队销售-元素 */
+.teamPurchase-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  font-size: 32rpx;
+  height: 120rpx;
+}
+/* 团队销售-元素-金额 */
+.teamPurchase-item-price {
+  color: #d00914;
+}
+.teamPurchase-item-price::before {
+  content: '¥';
+}

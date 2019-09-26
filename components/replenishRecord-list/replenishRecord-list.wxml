@@ -1,0 +1,23 @@
+<wxs src='../../utils/filter.wxs' module='filter' />
+<custom-scroll class='transferRecord-list' bindPullDownRefresh='init'>
+  <container class='container' binderror='init'>
+    <table wx:for='{{list}}' wx:key='{{index}}'>
+      <tr>
+        <td>出货人</td>
+        <td>{{item.se_name}}</td>
+      </tr>
+      <tr>
+        <td>商品名称</td>
+        <td>{{item.go_name}}</td>
+      </tr>
+      <tr>
+        <td>申请时间</td>
+        <td>{{item.settime}}</td>
+      </tr>
+      <tr>
+        <td>申请数量</td>
+        <td>{{item.num}}</td>
+      </tr>
+    </table>
+  </container>
+</custom-scroll>

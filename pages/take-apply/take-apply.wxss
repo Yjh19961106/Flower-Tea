@@ -1,0 +1,26 @@
+@import '../../utils/apply-detail.wxss';
+#container {
+  min-height: 100vh;
+  background-color: #F2F2F2;
+}
+
+/* 申请-详情 */
+.apply-detail {
+  padding: 20rpx 0;
+}
+.apply-detail td {
+  border: none;
+  padding: 0 20rpx;
+  height: 60rpx;
+}
+
+/* 统计 */
+.count {
+  padding: 0 20rpx;
+}
+/* 统计-标题 */
+.count-title {
+  text-align: center;
+  font-size: 28rpx;
+  margin: 20rpx;
+}

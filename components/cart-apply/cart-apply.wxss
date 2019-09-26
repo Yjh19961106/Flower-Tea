@@ -1,0 +1,95 @@
+:host {
+  display: block;
+  position: fixed;
+  top: 0;
+  touch-action: none;
+}
+
+/* 购物车-蒙版 */
+.cart-mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: 500ms all;
+}
+.cart-mask.hidden {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+/* 购物车-面板 */
+.cart-panel {
+  display: block;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+  font-size: 28rpx;
+
+  transition: 500ms all;
+}
+.cart-panel.hidden {
+  display: block;
+  pointer-events: none;
+
+  transform: translateY(100%);
+  transition: 500ms all;
+}
+
+/* 购物车-关闭 */
+.cart-close {
+  --size: 40rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 30rpx;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+}
+
+
+
+/* 购物车-标题 */
+.cart-title {
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+/* 购物车-数据 */
+.cart-panel table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-panel td:first-of-type {
+  text-align: right;
+  width: 200rpx;
+}
+.cart-panel td {
+  line-height: 80rpx;
+  border-top: 2rpx solid #F2F2F2;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+
+/* 购物车-表单 */
+.cart-form {
+  padding-top: 100rpx;
+  display: block;
+}
+
+/* 购物车-结算 */
+.cart-button {
+  --height: 90rpx;
+
+  width: 600rpx;
+  height: var(--height);
+  border-radius: calc(var(--height) / 2);
+  margin: 30rpx auto;
+}

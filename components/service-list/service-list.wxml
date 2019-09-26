@@ -1,0 +1,16 @@
+<!-- 服务-元素 -->
+<view class='service-item' wx:for='{{list}}' wx:key='{{index}}'>
+  <!-- 服务-元素-图标 -->
+  <!-- <custom-image type='icon' class='service-item-icon' src='/images/service/type{{item.type}}.png' /> -->
+  <!-- 服务-元素-详情 -->
+  <view class='service-item-detail'>
+    <!-- 服务-元素-标题 -->
+    <view class='service-item-title'>
+      {{item.name}}
+    </view>
+    <!-- 服务-元素-内容 -->
+    <view class='service-item-content'>
+      {{item.wechat}}
+    </view>
+  </view>
+</view>

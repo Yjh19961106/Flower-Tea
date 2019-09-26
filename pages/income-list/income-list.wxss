@@ -1,0 +1,85 @@
+page {
+  background-color: #f2f2f2;
+}
+#container {
+  min-height: 100vh;
+}
+/* 收益-列表 */
+.income-list {
+  padding: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+/* 收益-元素 */
+.income-item {
+  background-color: #FFF;
+  margin: 10rpx;
+  border-radius: 10rpx;
+}
+/* 收益-元素-顶部 */
+.income-item-header {
+  display: flex;
+  padding: 0 20rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+  align-items: center;
+  height: 80rpx;
+}
+/* 收益-元素-底部 */
+.income-item-footer {
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  padding: 20rpx;
+}
+/* 收益-元素-详情 */
+.income-item-detail {
+  flex: 1;
+}
+
+/* 收益-元素-分类 */
+.income-item-type {
+  background-color: var(--main);
+  font-size: 24rpx;
+  color: #FFF;
+  line-height: 40rpx;
+  padding: 0 20rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+/* 收益-元素-电话 */
+.income-item-phone {
+  flex: 1;
+  font-size: 24rpx;
+  color: #777;
+}
+/* 收益-元素-时间 */
+.income-item-date {
+  font-size: 24rpx;
+  color: #777;
+}
+/* 收益-元素-封面 */
+.income-item-cover {
+  width: 120rpx;
+  height: 120rpx;
+}
+/* 收益-元素-标题 */
+.income-item-title {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  font-weight: bold;
+  margin: 0 20rpx;
+}
+/* 收益-元素-金额 */
+.income-item-price {
+  justify-content: flex-end;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  display: flex;
+  align-items: baseline;
+  color: #777;
+}
+.income-item-price view {
+  color: #d8636e;
+  font-size: 40rpx;
+}

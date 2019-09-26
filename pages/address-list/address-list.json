@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "custom-radio": "/components/custom-radio/custom-radio",
+    "address": "/components/address/address",
+    "enter": "/components/enter/enter"
+  }
+}

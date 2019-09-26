@@ -1,0 +1,35 @@
+<container id='container' binderror='init'>
+
+  <!-- 团队销售-总额 -->
+  <view class='teamSales-total'>
+    <!-- 团队销售-总额-标题 -->
+    <view class='teamSales-total-title'>团队销售总额</view>
+    <!-- 团队销售-总额-金额 -->
+    <view class='teamSales-total-price'>{{teamSales.total}}</view>
+  </view>
+
+  <!-- 团队销售-顶部 -->
+  <view class='teamSales-header'>
+    <view>年份</view>
+    <picker mode='date' fields='year' end='{{year.max}}' bindchange='yearChange'>
+      <view class='year'>
+        {{year.current}}<custom-image type='icon' class='year-more' src='/images/public/down.png' />
+      </view>
+    </picker>
+  </view>
+
+  <!-- 团队销售-列表 -->
+  <view class='teamSales-list'>
+    <!-- 团队销售-元素 -->
+    <view class='teamSales-item' wx:for='{{teamSales.list}}' wx:key='{{index}}'>
+      <!-- 团队销售-元素-标题 -->
+      <view class='teamSales-item-title'>
+        {{index + 1}}月销售额
+      </view>
+      <!-- 团队销售-元素-金额 -->
+      <view class='teamSales-item-price'>
+        {{item}}
+      </view>
+    </view>
+  </view>
+</container>

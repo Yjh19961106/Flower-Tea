@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "order-goods": "/components/order-goods/order-goods",
+    "custom-scroll": "/components/custom-scroll/custom-scroll"
+  }
+}

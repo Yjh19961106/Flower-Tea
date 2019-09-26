@@ -1,0 +1,74 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.container {
+  overflow: auto;
+  background-color: #FFF;
+}
+
+/* 搜索-元素 */
+.search-item {
+  display: flex;
+  margin: 40rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #FFF;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.4);
+}
+/* 搜索-元素-封面 */
+.search-item-cover {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx;
+  flex-shrink: 0;
+}
+/* 搜索-元素-左右布局 */
+.search-item-wing {
+  display: flex;
+}
+/* 搜索-元素-详情 */
+.search-item-detail {
+  margin: 10rpx;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* 搜索-元素-标题 */
+.search-item-title {
+  font-size: 28rpx;
+}
+/* 搜索-元素-标语 */
+.search-item-slogan {
+  font-size: 24rpx;
+  color: #999;
+  flex-grow: 1;
+}
+/* 搜索-元素-价格 */
+.search-item-price {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+}
+/* 搜索-元素-现价 */
+.search-item-price-real {
+  font-size: 28rpx;
+  color: var(--main);
+}
+/* 搜索-元素-原价 */
+.search-item-price-tag {
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 10rpx;
+}
+/* 搜索-元素-按钮 */
+.search-item-button {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 0;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #FFF;
+  background-image: linear-gradient(90deg, #f94b82, #f98e74);
+}

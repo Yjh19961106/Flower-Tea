@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "出库提醒",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "enter": "/components/enter/enter"
+  }
+}

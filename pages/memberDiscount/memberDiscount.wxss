@@ -1,0 +1,16 @@
+page {
+  background-color: #f2f2f2;
+}
+
+#tab {
+  padding-top: 80rpx;
+}
+
+#tab-nav {
+  position: fixed;
+  top: 0rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+  z-index: 1001;
+  background-color: #fff;
+}

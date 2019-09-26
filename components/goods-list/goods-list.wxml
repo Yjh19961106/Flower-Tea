@@ -1,0 +1,21 @@
+<!-- 商品-列表 -->
+<view class='goods-list'>
+  <!-- 商品-元素 -->
+  <navigator url='/pages/goods-detail/goods-detail?id={{item.id}}' class='goods-item' wx:for='{{data}}' wx:key='{{item.id}}' hover-class='none'>
+    <!-- 商品-元素-封面 -->
+    <custom-image type='cover' class='goods-item-cover' src='{{item.thumb}}' />
+    <!-- 商品-元素-详情 -->
+    <view class='goods-item-detail'>
+      <!-- 商品-元素-价格 -->
+      <view class='goods-item-price'>
+        抢购价({{item.shoujia}}){{userInfo.group_id}}
+      </view>
+      <!-- 商品-元素-菜单 -->
+      <view class='goods-item-menu'>
+        <button wx:if='{{!share}}' catchtap='tips' class='goods-item-button'>立即分享</button>
+        <button wx:else open-type='share' catchtap='share' data-id='{{item.id}}' data-intro='{{item.title}}' data-cover='{{item.thumb}}' class='goods-item-button'>立即分享</button>
+        <button class='goods-item-button'>立即购买</button>
+      </view>
+    </view>
+  </navigator>
+</view>

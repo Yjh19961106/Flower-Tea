@@ -1,0 +1,86 @@
+page {
+  background-color: #F2F2F2;
+}
+#container {
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: calc(150rpx + 90rpx);
+}
+/* 地址-列表 */
+.address-list {
+  display: flex;
+  flex-direction: column;
+  padding: 5rpx 0;
+}
+/* 地址-元素 */
+.address-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF; 
+  margin: 5rpx 0;
+  color: #b6b6b6;
+  font-size: 24rpx;
+}
+/* 地址-元素-顶部 */
+.address-item-header {
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+/* 地址-元素-详情 */
+.address-item-detail {
+  padding: 30rpx 0;
+  flex: 1;
+}
+/* 地址-元素-底部 */
+.address-item-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  border-top: 2rpx solid #F2F2F2;
+  height: 90rpx;
+  align-items: center;
+}
+
+/* 地址-元素-默认 */
+.address-item-default {
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 30rpx;
+  display: flex;
+}
+.address-item-default custom-radio {
+  margin-right: 15rpx;
+}
+
+/* 地址-元素-操作 */
+.address-item-operation {
+  display: flex;
+}
+/* 地址-元素-操作-按钮 */
+.address-item-operation-button {
+  font-size: 28rpx;
+  height: 50rpx;
+  padding: 0 40rpx;
+  border: 2rpx solid currentColor;
+  color: var(--main);
+  border-radius: 25rpx;
+  margin-right: 30rpx;
+}
+.address-item-operation-button image {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+/* 添加地址 */
+.address-post {
+  height: 90rpx;
+  border-radius: 45rpx;
+  width:600rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 75rpx;
+  margin: auto;
+}

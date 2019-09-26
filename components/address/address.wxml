@@ -1,0 +1,20 @@
+<!-- 地址-图标 -->
+<custom-image type='icon' class='address-icon' src='/images/public/location.png' />
+<!-- 地址-详情 -->
+<view class='address-detail'>
+  <!-- 地址-顶部 -->
+  <view class='address-header'>
+    <!-- 地址-名称 -->
+    <view class='address-name'>
+      收件人：{{data.name}}
+    </view>
+    <!-- 地址-电话 -->
+    <view class='address-phone'>
+      {{data.mobile}}
+    </view>
+  </view>
+  <!-- 地址-详情地址 -->
+  <view class='address-location' data-index='{{index}}'>
+    收货地址：{{data.region}}{{data.city}}{{data.xian}}{{data.address}}
+  </view>
+</view>

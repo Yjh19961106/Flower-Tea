@@ -1,0 +1,120 @@
+#container {
+  min-height: 100vh;
+}
+
+/* 表单 */
+.form {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 表单-顶部 */
+.form-header {
+  width: 100%;
+  height: 400rpx;
+  position: relative;
+}
+/* 表单-中部 */
+.form-body {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* 表单-底部 */
+.form-footer {
+}
+
+/* 表单-顶部 */
+.form-header {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+/* 表单-顶部-背景 */
+.form-header-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+/* 表单-顶部-图标 */
+.form-header-icon {
+  height: 200rpx;
+  width: 200rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50rpx;
+  margin: auto;
+  z-index: 2;
+}
+
+/* 表单-工具 */
+.form-tool {
+  width: 550rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+}
+/* 表单-列表 */
+.form-list {
+  width: 550rpx;
+  margin: 0 auto;
+}
+/* 表单-元素 */
+.form-item {
+  border-bottom: 2rpx solid #F2F2F2;
+  display: flex;
+  align-items: center;
+  height: 120rpx;
+  margin-top: 20rpx;
+}
+/* 表单-元素-交互 */
+.form-item-scanner {
+  flex: 1;
+  height: 100%;
+  width: 0;
+}
+.form-item-scanner input, .form-item-scanner custom-password {
+  font-size: 32rpx;
+  height: 100%;
+}
+/* 表单-元素-按钮 */
+.form-item-button {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+  color: #999;
+  background-color: #F2F2F2;
+  width: 200rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+/* 表单-提交 */
+.form-submit {
+  height: 100rpx;
+  width: 550rpx;
+  padding: 0;
+  border-radius: 10rpx;
+  margin: 80rpx auto;
+}
+
+/* 表单-底部 */
+.form-agreement {
+  margin: 80rpx auto;
+  display: flex;
+  font-size: 28rpx;
+  justify-content: center;
+  align-items: center;
+}
+.form-agreement navigator {
+  color: #33CCFF;
+}
+.form-agreement custom-radio {
+  margin: 0 10rpx;
+}

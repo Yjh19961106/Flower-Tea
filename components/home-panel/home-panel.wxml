@@ -1,0 +1,16 @@
+<!-- 顶部 -->
+<view class='home-panel-header'>
+  <!-- 装饰 -->
+  <view class='home-panel-line'></view>
+  <!-- 标题 -->
+  <view class='home-panel-title'>
+    <view class='home-panel-title-content'>{{title}}</view>
+    <view class='home-panel-circular'></view>
+  </view>
+  <!-- 更多 -->
+  <navigator class='home-panel-more' wx:if='{{more}}' url='{{more}}'>查看更多</navigator>
+</view>
+<!-- 内容 -->
+<view class='home-panel-body'>
+  <slot></slot>
+</view>

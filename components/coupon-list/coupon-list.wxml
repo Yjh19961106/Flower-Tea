@@ -1,0 +1,50 @@
+<wxs module="filter">
+  module.exports = {
+    /**
+     * 随机数
+     */
+    random: function(seed = 0, min, max) {
+      seed = (seed * 9301 + 49297) % 233280
+      var rnd = seed / 233280.0
+      return Math.ceil(min + rnd * (max - min))
+    }
+  }
+</wxs>
+<custom-scroll class='custom-scroll' bindPullDownRefresh='init' bindReachBottom='onReachBottom'>
+  <container class='container' binderror='init'>
+    <!-- 优惠券-列表 -->
+    <view class='coupon-list'>
+      <!-- 优惠券-元素 -->
+      <view class='coupon-item {{item.status!=0?"coupon-item-disabled":""}}' wx:for='{{list}}' wx:key='{{index}}' wx:if='{{item.status >= categoryId}}'>
+
+        <!-- 优惠券-背景 -->
+        <custom-image type='cover' wx:if='{{item.status==0}}' class='coupon-item-background' src='/images/coupon/coupon-{{filter.random(item.coupon.id, 1, 4)}}.png' />
+        <custom-image type='cover' wx:else class='coupon-item-background' src='/images/coupon/coupon-disabled.png' />
+
+        <!-- 优惠券-前景 -->
+        <view class='coupon-item-foreground'>
+          <!-- 优惠券-抵价 -->
+          <view class='coupon-item-deduction'>
+            <!-- 优惠券-抵价-价格 -->
+            <view class='coupon-item-deduction-price'>{{item.coupon.reduce}}</view>
+            <!-- 优惠券-抵价-标题 -->
+            <view class='coupon-item-deduction-title'>优惠券</view>
+          </view>
+
+          <!-- 优惠券-详情 -->
+          <view class='coupon-item-detail'>
+            <!-- 优惠券-详情-条件 -->
+            <view class='coupon-item-detail-condition'>满{{item.coupon.max}}减{{item.coupon.reduce}}</view>
+            <!-- 优惠券-详情-说明 -->
+            <view class='coupon-item-detail-explain'>每人仅限领取一张</view>
+          </view>
+
+          <!-- 优惠券-进入 -->
+          <view class='coupon-item-enter' bindtap='couponDetail'>
+            <text>立即\n使用</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </container>
+</custom-scroll>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "提交评论",
+  "usingComponents": {
+    "rank": "/components/rank/rank",
+    "pictrue-list": "/components/pictrue-list/pictrue-list"
+  }
+}

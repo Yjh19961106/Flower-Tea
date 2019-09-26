@@ -1,0 +1,403 @@
+#container {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+}
+
+/* 段落 */
+
+.section {
+  background-color: #fff;
+  overflow: auto;
+}
+
+.section:not(:last-of-type) {
+  margin-bottom: 20rpx;
+}
+
+/* 用户信息 */
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  width: 700rpx;
+  margin: auto;
+  padding-top: 10rpx;
+}
+
+/* 用户信息-详情 */
+
+.userInfo-detail {
+  flex: 1;
+}
+
+/* 用户详情-退出 */
+
+.userInfo-exit {
+  color: #666;
+  font-size: 24rpx;
+  padding: 20rpx 0;
+  align-self: flex-start;
+}
+
+/* 用户信息-顶部 */
+
+.userInfo-header {
+  display: flex;
+  align-items: center;
+  margin: 10rpx 0;
+}
+
+/* 用户信息-头像 */
+
+.userInfo-avatar {
+  border: 10rpx solid #fff;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.2);
+  margin-right: 20rpx;
+}
+
+/* 用户信息-用户名 */
+
+.userInfo-nickname {
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+
+/* 用户信息-级别 */
+
+.userInfo-rank {
+  width: 150rpx;
+  height: 40rpx;
+  box-sizing: border-box;
+  line-height: 40rpx;
+  padding-left: 38rpx;
+  font-size: 24rpx;
+  position: relative;
+  color: #fff;
+  margin-left: 20rpx;
+}
+
+.userInfo-rank view {
+  position: relative;
+  z-index: 1;
+}
+
+/* 用户信息-底部 */
+
+.userInfo-footer {
+  display: flex;
+  margin: 10rpx 0;
+}
+
+.userInfo-footer-item {
+  color: #9c9c9c;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  line-height: 24rpx;
+}
+
+.userInfo-footer-item:not(:last-of-type)::after {
+  display: block;
+  content: '';
+  margin: 0 40rpx;
+  width: 2rpx;
+  height: 24rpx;
+  background-color: currentColor;
+}
+
+/* 登录 */
+
+.userInfo-login {
+  line-height: 40rpx;
+  font-size: 32rpx;
+}
+
+/* 资本 */
+
+.capital {
+  height: 250rpx;
+  width: 700rpx;
+  position: relative;
+  margin: 50rpx auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 var(--main);
+}
+
+/* 资本-背景 */
+
+.capital-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* 资本-前景 */
+
+.capital-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0 50rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 资本-标题 */
+
+.capital-title {
+  margin-top: 20rpx;
+  display: flex;
+  color: #fff;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  align-items: flex-end;
+}
+
+.capital-title custom-image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+/* 资本-收益 */
+
+.capital-profit {
+  color: #fff;
+  font-size: 48rpx;
+  line-height: 48rpx;
+  margin-top: 30rpx;
+  display: flex;
+  font-weight: bold;
+}
+
+.capital-profit::after {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  font-weight: normal;
+  content: 'RMB';
+  display: block;
+  transform: translateY(-12rpx);
+}
+
+/* 资本-团队销售 */
+
+.capital-teamSales {
+  align-items: center;
+  display: flex;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  width: 260rpx;
+  height: 50rpx;
+  border-top-left-radius: 25rpx;
+  border-bottom-left-radius: 25rpx;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: 50rpx;
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+}
+
+.capital-teamSales custom-image {
+  width: 32rpx;
+  height: 32rpx;
+  margin: 0 15rpx;
+}
+
+.capital-teamSales enter {
+  margin-left: 10rpx;
+}
+
+/* 资本-提现 */
+
+.capital-cashOut {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* 资本-提现-按钮 */
+
+.capital-cashOut-button {
+  width: 180rpx;
+  height: 60rpx;
+  background-color: #fff;
+  color: var(--main);
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+/* 菜单-列表 */
+
+.menu-list, .menu-list1 {
+  display: flex;
+  margin: 50rpx auto;
+  width: 700rpx;
+  background: white;
+  
+}
+.menu-list1  {
+  margin: 20rpx;
+}
+
+
+/* 菜单-元素 */
+
+.menu-item {
+  flex: 1;
+  padding: 20rpx;
+}
+
+/* 菜单-图标 */
+
+.menu-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+/* 菜单-标题 */
+
+.menu-title {
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  margin-top: 20rpx;
+}
+
+/* 按钮-列表 */
+
+.button-list {
+  display: flex;
+  margin: 50rpx auto;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  width: 700rpx;
+ 
+  padding-bottom: 20rpx;
+}
+
+/* 按钮-元素 */
+
+.button-item {
+  height: 60rpx;
+  width: 150rpx;
+  color: var(--main);
+  background: #fff;
+  border: 1rpx solid #82b4a3;
+  border-radius: 30rpx;
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 纵列-列表 */
+
+.column-list {
+  padding: 0 50rpx;
+  border-top: 20rpx solid #f2f2f2;
+  border-bottom: 20rpx solid #f2f2f2;
+}
+
+/* 纵列-元素 */
+
+.column-item {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  padding: 0 10rpx;
+}
+
+.column-item:not(:last-of-type) {
+  border-bottom: 2rpx solid #f2f2f2;
+}
+
+/* 纵列-元素-图标 */
+
+.column-item-icon {
+  height: 34rpx;
+  width: 34rpx;
+  margin: 0 10rpx;
+}
+
+/* 纵列-元素-标题 */
+
+.column-item-title {
+}
+
+/* 纵列-元素-红点 */
+
+.column-item-dot {
+  position: relative;
+}
+
+.column-item-dot::after {
+  display: block;
+  content: '';
+  background-color: #f00;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 10rpx;
+  position: absolute;
+  left: calc(100% + 10rpx);
+  top: 0;
+}
+
+/* 级别 */
+
+.rank {
+  margin: 20rpx auto;
+  width: 700rpx;
+}
+
+/* 级别-标题 */
+
+.rank-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+/* 级别-列表 */
+
+.rank-list {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 级别-元素 */
+
+.rank-item {
+  width: 140rpx;
+}
+
+/* 级别-元素-图标 */
+
+.rank-item-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin: auto;
+}
+
+/* 级别-元素-标题 */
+
+.rank-item-title {
+  margin-top: 10rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.rankItem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 15rpx;
+
+}

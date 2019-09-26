@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "补货申请",
+  "usingComponents": {
+    "table": "/components/table/table",
+    "thead": "/components/table/thead",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

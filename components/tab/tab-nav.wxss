@@ -1,0 +1,29 @@
+/* 导航 */
+:host {
+  display: block;
+  flex-grow: 0;
+  height: 60rpx;
+  color: #404040;
+  width: 100%;
+  font-size: 32rpx;
+}
+/* 滚动 */
+.tab-scroll {
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  box-sizing: border-box;
+}
+.tab-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+  opacity: 0;
+}

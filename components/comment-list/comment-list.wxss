@@ -1,0 +1,55 @@
+/* 评论-元素 */
+.comment-item {
+  padding: 40rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+
+/* 用户信息 */
+.userInfo {
+  display: flex;
+}
+/* 用户信息-头像 */
+.userInfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+}
+/* 用户信息-详情 */
+.userInfo-detail {
+  flex: 1;
+  margin: 0 20rpx;
+}
+/* 用户信息-昵称 */
+.userInfo-nickname {
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+/* 用户信息-日期 */
+.userInfo-datetime {
+  font-size: 28rpx;
+}
+/* 用户信息-评级 */
+.userInfo-grade {
+  display: flex;
+}
+.userInfo-grade-item {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+
+/* 评论-详情 */
+.comment-detail {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+
+/* 商品详情 */
+.goods-detail {
+  display: flex;
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+.goods-detail-item:not(:first-of-type) {
+  margin-left: 40rpx;
+}

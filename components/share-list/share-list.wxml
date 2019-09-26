@@ -1,0 +1,50 @@
+<container class='container' binderror='init'>
+
+  <!-- 分享-列表 -->
+  <view class='share-list'>
+
+    <!-- 分享-元素 -->
+    <view class='share-item' wx:for='{{list}}' wx:key='{{index}}'>
+
+      <!-- 用户头像 -->
+      <custom-image type='cover' class='share-item-avatar' src='{{item.share_avatar}}' />
+
+      <!-- 分享-元素-详情 -->
+      <view class='share-item-detail'>
+        <!-- 分享-元素-标题 -->
+        <view class='share-item-title'>{{item.share_name}}</view>
+
+        <!-- 分享-元素-内容 -->
+        <custom-text class='share-item-content' text='{{item.share_content}}' line='3' />
+
+        <block wx:if='{{item.share_img_thumb}}'>
+          <!-- 分享-元素-视频 -->
+          <custom-video class='share-item-video' cover='{{item.share_img_thumb[0]}}' src='{{item.video}}' wx:if='{{item.is_video==1}}' />
+          <block wx:else>
+            <!-- 分享-元素-图片 -->
+            <custom-image class='share-item-picture' preview='{{item.share_images[0]}}' type='poster' src='{{item.share_img_thumb[0]}}' wx:if='{{item.share_img_thumb.length==1}}' />
+            <picture-list class='share-item-picture' preview='{{item.share_images || false}}' value='{{item.share_img_thumb}}' size='{{item.share_img_thumb.length%2==0?6:4}}' wx:else />
+          </block>
+        </block>
+        <block wx:else>
+          <!-- 分享-元素-视频 -->
+          <custom-video class='share-item-video' cover='{{item.share_images[0]}}' src='{{item.video}}' wx:if='{{item.is_video==1}}' />
+          <!-- 分享-元素-图片 -->
+          <block wx:else>
+            <custom-image class='share-item-picture' preview='{{item.share_images[0]}}' type='poster' src='{{item.share_images[0]}}' wx:if='{{item.share_images.length==1}}' />
+            <picture-list class='share-item-picture' preview='{{item.share_images || false}}' value='{{item.share_images}}' size='{{item.share_images.length%2==0?6:4}}' wx:else />
+          </block>
+        </block>
+        <!-- 分享-元素-底部 -->
+        <view class='share-item-footer'>
+          <!-- 分享-元素-时间 -->
+          <view class='share-item-date'>{{item.share_time}}</view>
+          <!-- 分享-元素-图片下载 -->
+          <!-- <view class='share-item-button share-item-button-single' bindtap='saveImage' wx:if='{{item.share_images.length}}' data-index='{{index}}'>图片下载</view> -->
+          <!-- 分享-元素-复制文字 -->
+          <view class='share-item-button share-item-button-color' bindtap='copyContent' data-index='{{index}}'>复制文字</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</container>

@@ -1,0 +1,36 @@
+<container class='container' binderror='init'>
+  <!-- 团队-元素 -->
+  <view class='group-list'>
+    <!-- 团队-元素 -->
+    <view class='group-item' bindtap='navigateTo' wx:for='{{list}}' wx:key='{{index}}' wx:if='{{item.group_name == categoryId || categoryId==""}}' data-index='{{index}}'>
+      <!-- 团队-元素-头像 -->
+      <avatar class='group-item-avatar' src='{{item.avatar}}' />
+      <!-- 团队-元素-详情 -->
+      <view class='group-item-detail'>
+        <!-- 团队-元素-顶部 -->
+        <view class='group-item-header'>
+          <!-- 团队-元素-昵称 -->
+          <view class='group-item-nickname'>
+            {{item.nickname}}
+            <custom-image type='icon' wx:if='{{item.group_id==2}}' class='group-item-rank' src='/images/group-list/vip.png' />
+            <custom-image type='icon' wx:elif='{{item.group_id==3}}' class='group-item-rank' src='/images/group-list/silver.png' />
+            <custom-image type='icon' wx:elif='{{item.group_id==4}}' class='group-item-rank' src='/images/group-list/gold.png' />
+            <custom-image type='icon' wx:elif='{{item.group_id==5}}' class='group-item-rank' src='/images/group-list/diamond.png' />
+          </view>
+          <view>成员{{item.count}}人</view>
+        </view>
+        <!-- 团队-元素-底部 -->
+        <view class='group-item-footer'>
+          <view>
+            {{item.userid}}
+          </view>
+          <view class='group-item-price'>
+            总收益：
+            <view>{{item.income}}</view>
+          </view>
+        </view>
+      </view>
+      <enter />
+    </view>
+  </view>
+</container>

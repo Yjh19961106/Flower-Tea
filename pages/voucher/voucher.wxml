@@ -1,0 +1,13 @@
+<form bindsubmit='submit'>
+  <container id='container' binderror='init'>
+    <!-- 凭证 -->
+    <chosePicture class='voucher' name='voucher' />
+    <!-- 说明 -->
+    <view class='explain'>
+      <custom-image class='explain-icon' src='/images/voucher/warning.png' />
+      <view class='explain-detail'>此凭证会传递给您的上级发货人，作为您此次订单的支付凭证</view>
+    </view>
+    <!-- 按钮 -->
+    <button form-type='submit' class='custom-button' id='submit'>下一步</button>
+  </container>
+</form>

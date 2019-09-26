@@ -1,0 +1,24 @@
+<container id='container' binderror='init'>
+
+  <!-- 轮播 -->
+  <swiper class='swiper' autoplay='{{swiper.options.autoplay}}' circular='{{swiper.options.circular}}' indicator-dots='{{swiper.options.indicatorDots}}' indicator-color='{{swiper.options.indicatorColor}}' indicator-active-color='{{swiper.options.indicatorActiveColor}}'>
+    <swiper-item wx:for='{{swiper.list}}' wx:key='{{index}}'>
+      <custom-image type='cover' src='{{item.thumb}}' />
+    </swiper-item>
+  </swiper>
+
+  <!-- 菜单-列表 -->
+  <!-- <view class='menu-list'>
+    <navigator url='{{item.url}}' class='menu-item' wx:for='{{menu.list}}' wx:key='{{index}}'>
+      <custom-image type='icon' class='menu-icon' src='{{item.icon}}' />
+      <view class='menu-title'>{{item.title}}</view>
+    </navigator>
+  </view> -->
+
+  <!-- 横幅 点击跳转积分商城 -->
+
+  <custom-image class='banner' type='poster' src='/images/home/banner.png' bindtap="LinkToIntegral" />
+  
+  <!-- 商品列表 -->
+  <goods-list data='{{goods.list}}' />
+</container>

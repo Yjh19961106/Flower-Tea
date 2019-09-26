@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-scroll": "/components/custom-scroll/custom-scroll",
+    "custom-text": "/components/custom-text/custom-text",
+    "custom-video": "/components/custom-video/custom-video",
+    "picture-list": "/components/picture-list/picture-list"
+  }
+}

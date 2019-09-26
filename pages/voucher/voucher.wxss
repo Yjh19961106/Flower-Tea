@@ -1,0 +1,47 @@
+page {
+}
+
+#container {
+  height: 100vh;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 凭证 */
+.voucher {
+  flex: 1;
+  height: 0;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20rpx 100rpx;
+  box-sizing: border-box;
+}
+
+/* 说明 */
+.explain {
+  margin: 20rpx 0;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 说明-图标 */
+.explain-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+/* 说明-详情 *//
+.explain-detail {
+  width: 450rpx;
+}
+
+/* 提交 */
+#submit {
+  margin: 20rpx auto;
+  width: 550rpx;
+}

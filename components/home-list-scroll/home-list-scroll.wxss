@@ -1,0 +1,130 @@
+:host {
+  display: block;
+}
+
+
+
+/* 横幅 */
+.goods-banner {
+  width: 100%;
+}
+.goods-banner-image {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 商品-滚动 */
+.goods-scroll {
+  width: 100%;
+  overflow-x: scroll;
+  position: relative;
+  margin-top: -50rpx;
+  -webkit-overflow-scrolling: touch;
+}
+/* 商品-列表 */
+.goods-list {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  padding: 0 60rpx;
+  padding-bottom: 40rpx;
+}
+/* 商品-元素 */
+.goods-item {
+  background-color: #FFF;
+  width: calc(210rpx - 4rpx);
+  /* padding: 10rpx; */
+  margin: 2rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 0 2rpx 0 rgba(0, 0, 0, 0.4);
+}
+/* 商品-元素-详情 */
+.goods-item-detail {
+  
+}
+/* 商品-元素-封面 */
+.goods-item-cover {
+  width: calc(100% - 20rpx);
+  height: 200rpx;
+  margin: 10rpx;
+}
+/* 商品-元素-标题 */
+.goods-item-title {
+  font-size: 28rpx;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 10rpx;
+  text-overflow: ellipsis;
+}
+/* 商品-元素-价格 */
+.goods-item-price {
+  display: flex;
+  margin: 10rpx;
+}
+/* 商品-元素-价格-标签价格 */
+.goods-item-price-tag {
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #AAA;
+  margin-left: 10rpx;
+  text-decoration: line-through;
+}
+.goods-item-price-tag::before {
+  content: '¥';
+}
+/* 商品-元素-价格-真实价格 */
+.goods-item-price-real {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: var(--main);
+}
+.goods-item-price-real::before {
+  content: '¥';
+}
+/* 商品-元素-按钮 */
+.goods-item-button {
+  margin: 10rpx auto;
+  color: #FFF;
+  width: fit-content;
+  padding: 0 10rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  background-image: linear-gradient(90deg, #f94b82, #f98e74);
+  border: none;
+}
+.goods-item-button::after {
+  display: none;
+}
+.goods-item-button:not(:first-of-type) {
+  margin-left: 20rpx;
+}
+
+
+
+/* 商品-更多 */
+.goods-more {
+  background-color: #FFF;
+  width: calc(210rpx - 4rpx);
+  margin: 2rpx;
+  box-shadow: 0 0 2rpx 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 商品-更多-图标 */
+.goods-more-icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.goods-more-text {
+  line-height: 40rpx;
+  height: 40rpx;
+  font-size: 24rpx;
+  color: #CCC;
+}

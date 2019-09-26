@@ -1,0 +1,17 @@
+<container id='container' binderror='init'>
+  <!-- 商品-元素 -->
+  <view class='goods-item' wx:for='{{replenish.list}}' wx:key='{{index}}' bindtap='detail' data-index='{{index}}'>
+    <!-- 商品-元素-封面 -->
+    <custom-image class='goods-item-cover' type='icon' src='{{item.thumb}}' />
+    <!-- 商品-元素-详情 -->
+    <view class='goods-item-detail'>
+      <!-- 商品-元素-详情 -->
+      <view class='goods-item-title'>{{item.name}}</view>
+      <!-- 商品-元素-底部 -->
+      <view class='goods-item-footer'>
+        <!-- 商品-元素-价格 -->
+        <view class='goods-item-price'>{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+</container>

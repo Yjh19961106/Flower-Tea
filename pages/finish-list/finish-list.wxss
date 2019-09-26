@@ -1,0 +1,159 @@
+/* pages/finish-list/finish-list.wxss */
+#container {
+  min-height: 100vh;
+}
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  width: 100%;
+  padding: 50rpx 0;
+}
+
+.headTitle, .headMoney {
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #bf3643;
+}
+
+.headMoney {
+  font-size: 46rpx;
+  margin-top: 17rpx;
+}
+
+.chooseBar {
+  width: 100%;
+  color: black;
+  line-height: 80rpx;
+  font-size: 26px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 53rpx;
+}
+
+.section {
+  box-shadow: 0 10rpx 10rpx 0 rgba(0, 0, 0, 0.1);
+  width: 285rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.pickerItem {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  /* align-items: center; */
+}
+
+.pickIcon {
+  width: 20rpx;
+  height: 18rpx;
+}
+
+.picker {
+  font-size: 26rpx;
+}
+
+.pickIcon {
+  margin-left: 15rpx;
+  margin-top: -10rpx;
+}
+
+.item {
+  padding: 10rpx 0 25rpx 0;
+  border-top: 8rpx solid #f2f2f2;
+}
+
+.itemHead {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 25rpx;
+}
+
+.itemUserImg {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.itemUserImg image {
+  border-radius: 50%;
+}
+
+.itemNickName {
+  font-size: 18px;
+  margin-left: 15rpx;
+}
+
+.itemCard {
+  width: fill-available;
+  background: rgba(248, 248, 248);
+  padding: 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.itemCardImg {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.itemCardOther {
+  margin-left: 30rpx;
+  width: 500rpx;
+}
+
+.itemCardName {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis; /*显示省略符号来代表被修剪的文本。*/
+  white-space: nowrap;
+}
+
+.itemCardSlogan {
+  font-size: 16px;
+  color: rgba(173, 173, 173);
+  overflow: hidden; /*对超出容器的部分强制截取，高度不确定则换行*/
+  text-overflow: ellipsis; /*显示省略符号来代表被修剪的文本。*/
+  white-space: nowrap;
+}
+
+.itemCardNum {
+  width: fill-available;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+  color: rgba(173, 173, 173);
+}
+
+.itemFoot {
+  padding: 25rpx 25rpx 0 25rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemMsg {
+  color: rgba(173, 173, 173);
+}
+
+.itemMsg text {
+  color: #bf3643;
+}
+.showNo {
+  width: 300rpx;
+  height: 300rpx;
+  margin: auto;
+  margin-top: 200rpx;
+}

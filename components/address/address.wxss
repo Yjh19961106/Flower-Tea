@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+/* 地址-图标 */
+.address-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+/* 地址-详情 */
+.address-detail {
+  display: flex;
+  flex-direction: column;
+  color: #999;
+  font-size: 28rpx;
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+/* 地址-顶部 */
+.address-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 地址-详情地址 */
+.address-location {
+  margin-top: 10rpx;
+}

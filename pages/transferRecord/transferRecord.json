@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "转移记录",
+  "usingComponents": {
+    "tab": "/components/tab/tab",
+    "tab-nav": "/components/tab/tab-nav",
+    "tab-nav-item": "/components/tab/tab-nav-item",
+    "tab-content": "/components/tab/tab-content",
+    "tab-content-item": "/components/tab/tab-content-item",
+    "replenishRecord-list": "/components/replenishRecord-list/replenishRecord-list",
+    "shmentRecord-list": "/components/shmentRecord-list/shmentRecord-list"
+  }
+}

@@ -1,0 +1,6 @@
+<!--pages/rules/rules.wxml-->
+<container id='container' binderror='init'>
+  <view class="msg">
+    <text>{{msg}}</text>
+  </view>
+</container>

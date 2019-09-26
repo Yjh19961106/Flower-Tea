@@ -1,0 +1,66 @@
+<container id='container' binderror='init'>
+
+  <form bindsubmit='submit'>
+
+    <!-- 订单设置 -->
+    <view class='orderPanel'>
+
+      <!-- 商品 -->
+      <view class='goods' wx:for='{{goods}}' wx:key='{{index}}'>
+        <!-- 商品-封面 -->
+        <custom-image type='cover' class='goods-cover' src='{{item.thumb}}' />
+        <!-- 商品-详情 -->
+        <view class='goods-detail'>
+          <!-- 商品-标题 -->
+          <view class='goods-title'>{{item.name}}</view>
+          <!-- 商品-简介 -->
+          <view class='goods-intro'>{{item.category_name}}</view>
+          <!-- 商品-规格 -->
+          <view class='goods-specs'>{{item.guige}} * {{order.num_all}}</view>
+        </view>
+      </view>
+
+      <!-- 订单设置-列表 -->
+      <view class='orderPanel-list'>
+        <!-- 订单设置-总计 -->
+        <view class='orderPanel-item orderPanel-item-total'>
+          <view class='orderPanel-item-content'>
+            共{{order.num_all}}件商品 小计:
+            <view class='orderPanel-item-price'>{{order.goods_money}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 留言 -->
+    <view class='orderPanel'>
+      <!-- 留言-标题 -->
+      <view class='orderPanel-header'>
+        买家留言
+        <input class='orderPanel-header-input' name='message' maxlength='45' placeholder='选填(45字以内)' />
+      </view>
+    </view>
+
+    <!-- 代理商 -->
+    <view class='agent'>
+      <view class='agent-item agent-import'>下单须知：您当前选择的商品，请联系代理商审核</view>
+      <view class='agent-item'>代理商等级：{{parent.gname}}</view>
+      <view class='agent-item'>代理商昵称：{{parent.nickname}}</view>
+      <view class='agent-item'>代理商手机：{{parent.mobile}}</view>
+    </view>
+
+    <!-- 凭证 -->
+    <custom-image class='voucher' type='poster' src='{{voucher}}' />
+
+    <!-- 操作栏 -->
+    <view class='actionBar'>
+      <!-- 操作栏-标题 -->
+      <view class='actionBar-title'>
+        合计金额:
+        <view class='actionBar-price'>{{order.goods_money}}</view>
+      </view>
+      <!-- 操作栏-结算 -->
+      <button form-type='submit' class='button-clear actionBar-submit'>提交订单</button>
+    </view>
+  </form>
+</container>

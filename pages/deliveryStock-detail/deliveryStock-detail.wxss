@@ -1,0 +1,94 @@
+#container {
+  min-height: 100vh;
+  overflow: auto;
+}
+
+/* 商品 */
+.goods {
+  display: flex;
+  width: 660rpx;
+  margin: 30rpx auto;
+}
+/* 商品-详情 */
+.goods-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15rpx;
+  flex: 1;
+  font-size: 24rpx;
+}
+/* 商品-封面 */
+.goods-cover {
+  width: 140rpx;
+  height: 140rpx;
+}
+/* 商品-标题 */
+.goods-title {
+  font-size: 28rpx;
+  flex: 1;
+}
+/* 商品-统计 */
+.goods-count {
+}
+/* 商品-总价 */
+.goods-price {
+  display: flex;
+}
+.goods-price view {
+  color: var(--main);
+  margin-left: 10rpx;
+}
+.goods-price view::before {
+  content: '¥';
+}
+
+/* 订单信息 */
+.order {
+  width: 660rpx;
+  font-size: 28rpx;
+  margin: 30rpx auto;
+}
+/* 订单信息-元素 */
+.order-item {
+  /* margin: 10rpx 0; */
+}
+
+/* 凭证 */
+.voucher {
+  width: 660rpx;
+  margin: auto;
+}
+
+/* 表单 */
+.form {
+  display: block;
+  width: 660rpx;
+  margin: 30rpx auto;
+}
+/* 表单-信息 */
+.form-message {
+  background-color: #F2F2F2;
+  height: 200rpx;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  overflow: hidden;
+}
+/* 表单-按钮-列表 */
+.form-button-list {
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: space-between;
+}
+/* 表单-提交 */
+.form-submit {
+  background-color: #F2F2F2;
+  border-radius: 40rpx;
+  height: 80rpx;
+  width: 310rpx;
+  font-size: 28rpx;
+  margin: 0;
+  padding: 0;
+}

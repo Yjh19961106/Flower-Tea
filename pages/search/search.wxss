@@ -1,0 +1,39 @@
+page {
+}
+/* 搜索-外框 */
+.search-container {
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+/* 搜索-输入 */
+.search-input {
+  margin: 10rpx;
+  background-color: #F2F2F2;
+  border: 2rpx solid #DDD;
+  padding-left: 30rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 24rpx;
+  flex: 1;
+}
+/* 搜索-按钮 */
+.search-button {
+  font-size: 24rpx;
+  color: #999;
+  padding: 0 20rpx;
+}
+
+
+
+/* 搜索-列表 */
+#search-list {
+  padding-top: 104rpx;
+  min-height: calc(100vh - 104rpx);
+}

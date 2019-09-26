@@ -1,0 +1,50 @@
+#container {
+  min-height: 100vh;
+}
+table {
+  font-size: 28rpx;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+thead td:first-of-type {
+  width: 200rpx;
+}
+thead td:last-of-type {
+  width: 160rpx;
+}
+thead td {
+  height: 80rpx;
+  vertical-align: middle;
+}
+tbody td {
+  height: 160rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+  border-top: 2rpx solid #F2F2F2;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.avatar {
+  height: 80rpx;
+  width: 80rpx;
+  margin: auto;
+}
+.nickname {
+  margin-top: 10rpx;
+  width: 180rpx;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: auto;
+}
+.enter {
+  border: 2rpx solid currentColor;
+  border-radius: 10rpx;
+  color: var(--main);
+  font-size: 24rpx;
+  padding: 0 10rpx;
+  line-height: 40rpx;
+  width: fit-content;
+  margin: auto;
+}

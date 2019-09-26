@@ -1,0 +1,18 @@
+<!-- 购物车-蒙版 -->
+<view class='cart-mask {{hidden?"hidden":""}}'>
+
+</view>
+<!-- 购物车-面板 -->
+<view class='cart-panel {{hidden?"hidden":""}}'>
+
+  <!-- 关闭按钮 -->
+  <view class='cart-close' bindtap='close'>
+    <image class='fill' src='./images/close.png' />
+  </view>
+
+  <!-- 购物车-主体 -->
+  <view class='cart-body'>
+    <!-- 插槽 -->
+    <slot></slot>
+  </view>
+</view>

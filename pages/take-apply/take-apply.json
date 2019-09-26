@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "提货申请",
+  "usingComponents": {
+    "address": "/components/address/address",
+    "count": "/components/count/count",
+    "custom-cart": "/components/custom-cart/custom-cart",
+    "caption": "/components/table/caption",
+    "table": "/components/table/table",
+    "thead": "/components/table/thead",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

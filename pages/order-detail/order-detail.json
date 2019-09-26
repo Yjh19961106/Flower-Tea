@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "enter": "/components/enter/enter",
+    "order-goods": "/components/order-goods/order-goods",
+    "address": "/components/address/address"
+  }
+}

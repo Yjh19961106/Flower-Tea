@@ -1,0 +1,14 @@
+#container {
+  min-height: 100vh;
+}
+/* 海报 */
+#poster {
+  width: 750rpx;
+  height: 1320rpx;
+}
+/* 保存 */
+#save {
+  width: 100%;
+  height: 100rpx;
+  border-radius: 0;
+}

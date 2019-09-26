@@ -1,0 +1,8 @@
+/* pages/rules/rules.wxss */
+.head{
+  padding: 35rpx 25rpx;
+  width: fill-available;
+}
+.msg {
+  padding: 10rpx;
+}

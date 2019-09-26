@@ -1,0 +1,83 @@
+<container id='container' binderror='init'>
+
+  <!-- 商品 -->
+  <view class='goods'>
+    <!-- 商品-轮播 -->
+    <swiper class='goods-swiper' autoplay='{{swiper.options.autoplay}}' circular='{{swiper.options.circular}}' indicator-dots='{{swiper.options.indicatorDots}}' indicator-color='{{swiper.options.indicatorColor}}' indicator-active-color='{{swiper.options.indicatorActiveColor}}'>
+      <swiper-item wx:for='{{swiper.list}}' wx:key='{{index}}'>
+        <custom-image type='cover' src='{{item.thumb}}' />
+      </swiper-item>
+    </swiper>
+    <!-- 商品-价格 -->
+    <view class='goods-price price'>{{goods.money}}</view>
+    <!-- 商品-标题 -->
+    <view class='goods-title'>{{goods.name}}</view>
+    <!-- 商品-描述 -->
+    <view class='goods-intro'>{{goods.content}}</view>
+  </view>
+
+  <!-- 详情 -->
+  <view class='apply-detail'>
+    <table>
+      <tbody>
+        <tr>
+          <td>包装规格</td>
+          <td>{{goods.guige}}</td>
+        </tr>
+        <tr>
+          <td>库　　存</td>
+          <td>{{goods.stock}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <view class='count'>
+      <view class='count-title'>提货数量</view>
+      <count class='count-main' value='1' max='{{userInfo.stock}}' bindchange='count' />
+    </view>
+  </view>
+
+  <!-- 地址 -->
+  <address data='{{address}}' bindtap='changeAddress' />
+
+  <!-- 打开购物车 -->
+  <button class='custom-button cart-open' bindtap='openCart'>提交提货申请</button>
+
+  <!-- 购物车 -->
+  <custom-cart id='cart'>
+    <form bindsubmit='submit'>
+      <!-- 购物车-表格 -->
+      <table class='cart-table'>
+        <caption>确认订单</caption>
+        <tbody>
+          <tr>
+            <td>产品名称：</td>
+            <td>{{goods.name}}</td>
+          </tr>
+          <tr>
+            <td>规格：</td>
+            <td>{{goods.guige}}</td>
+          </tr>
+          <tr>
+            <td>提货数量：</td>
+            <td>{{apply.count}}</td>
+          </tr>
+          <tr>
+            <td>收货人：</td>
+            <td>{{address.name}}</td>
+          </tr>
+          <tr>
+            <td>收货电话：</td>
+            <td>{{address.mobile}}</td>
+          </tr>
+          <tr>
+            <td>收货地址：</td>
+            <td>{{address.region}}{{address.city}}{{address.xian}}{{address.address}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 结算 -->
+      <button class='custom-button cart-button' form-type='submit'>确定</button>
+    </form>
+  </custom-cart>
+</container>

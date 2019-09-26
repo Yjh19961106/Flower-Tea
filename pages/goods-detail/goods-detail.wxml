@@ -1,0 +1,53 @@
+<container id='container' binderror='init'>
+
+  <!-- 商品-轮播 -->
+  <swiper class='goods-swiper' autoplay='{{swiper.options.autoplay}}' circular='{{swiper.options.circular}}' indicator-dots='{{swiper.options.indicatorDots}}' indicator-color='{{swiper.options.indicatorColor}}' indicator-active-color='{{swiper.options.indicatorActiveColor}}'>
+    <swiper-item wx:for='{{goods.pics}}' wx:key='{{index}}'>
+      <custom-image type='cover' class='fill' src='{{item}}' />
+    </swiper-item>
+  </swiper>
+
+  <!-- 商品-简介 -->
+  <view class='goods-intro'>
+    <!-- 商品-价格 -->
+    <view class="firstThings" wx:if="{{goods.category_id == 20}}">
+      <view class="left">
+        <view class='goods-price1'>{{goods.money}}积分</view>
+        <view class='goods-price2'>原价：￥{{goods.original}}</view>
+      </view>
+      <view class='goods-price3' wx:if="{{goods.postage != null}}">快递运费：{{goods.postage}}元</view>
+      <view class='goods-price3' wx:if="{{goods.postage == null}}">快递运费：包邮</view>
+    </view>
+    <view wx:if="{{goods.category_id != 20}}">
+      <view class='goods-price'>{{goods.shoujia}}</view>
+    </view>
+    <!-- 商品-标题 -->
+    <view class='goods-title' wx:if="{{goods.category_id != 20}}">{{goods.title}}</view>
+    <view class='goods-title' wx:if="{{goods.category_id == 20}}">{{goods.name}}</view>
+    <!-- 商品-备注 -->
+    <view class='goods-remark'>{{goods.slogan||''}}</view>
+  </view>
+
+  <!-- 商品-规格 -->
+  <view class='goods-specs' bindtap='openCart'>
+    <view class='goods-specs-title'>已选</view>
+    <view class='goods-specs-content'>{{goods.specs[specs].title}},数量:{{count}}</view>
+    <enter />
+  </view>
+
+  <!-- 商品-面板 -->
+  <goods-detail-panel title='商品详情'>
+    <rich content='{{goods.body}}' />
+  </goods-detail-panel>
+
+  <!-- 采购栏 -->
+  <view class='actionBar'>
+    <view class='actionBar-title'  wx:if="{{goods.category_id != 20}}">¥{{goods.specs[specs].price}}/{{goods.specs[specs].title}}</view>
+    <view class='actionBar-title' wx:if="{{goods.category_id == 20}}">{{goods.money}}积分</view>
+    <button class='custom-button actionBar-purchase' bindtap='openCart' wx:if="{{goods.category_id != 20}}">立即支付</button>
+    <button class='custom-button actionBar-purchase' bindtap='openCart' wx:if="{{goods.category_id == 20}}">立即兑换</button>
+  </view>
+
+  <!-- 购物车 -->
+  <cart id='cart' bindchange='cartChange' bindsubmit='submit' goods='{{goods}}' />
+</container>

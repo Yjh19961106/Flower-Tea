@@ -1,0 +1,102 @@
+/* pages/integralShop/details/details.wxss */
+#container {
+  min-height: 100vw;
+}
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.head {
+  width: 100%;
+  height: 340rpx;
+  border-top: 1rpx solid #f3f3f4;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.headNum {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 66rpx;
+  font-weight: 600;
+  position: absolute;
+  top: 124rpx;
+}
+
+.headShow {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 28rpx;
+  position: absolute;
+  top: 226rpx;
+}
+
+.chooseBar {
+  width: 100%;
+  height: 80rpx;
+  background: #f2f2f2;
+  color: black;
+  line-height: 80rpx;
+  font-size: 26px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pickerItem {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  /* align-items: center; */
+}
+
+.pickIcon {
+  width: 25rpx;
+  height: 20rpx;
+}
+
+.pickIcon view {
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-top: 5px solid #515151;
+}
+
+.picker {
+  font-size: 30rpx;
+}
+
+.pickIcon {
+  margin-left: 15rpx;
+  margin-top: -10rpx;
+}
+
+.userList {
+  width: fill-available;
+  height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #f2f2f2;
+  padding: 0 130rpx;
+}
+
+.userScore {
+  color: #83b5a4;
+  font-size: 14px;
+  font-weight: 600;
+}
+.userType {
+  font-size: 14px;
+}
+.userListImg {
+  width: 240rpx;
+  height: 220rpx;
+  margin: 160rpx auto;
+}

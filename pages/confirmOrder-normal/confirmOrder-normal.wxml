@@ -1,0 +1,96 @@
+<container id='container' binderror='init'>
+
+  <form bindsubmit='submit'>
+
+    <!-- 地址 -->
+    <address class='address' bindtap='changeAddress' data='{{address}}' />
+
+    <!-- 订单设置 -->
+    <view class='orderPanel'>
+
+      <!-- 商品 -->
+      <view class='goods' wx:for='{{goods}}' wx:key='{{index}}'>
+        <!-- 商品-封面 -->
+        <custom-image type='cover' class='goods-cover' src='{{item.thumb}}' />
+        <!-- 商品-详情 -->
+        <view class='goods-detail'>
+          <!-- 商品-标题 -->
+          <view class='goods-title'>{{item.name}}</view>
+          <!-- 商品-简介 -->
+          <view class='goods-intro'>{{item.category_name}}</view>
+          <!-- 商品-规格 -->
+          <view class='goods-specs'>{{order.num_all}}件</view>
+        </view>
+      </view>
+
+      <!-- 订单设置-列表 -->
+      <view class='orderPanel-list'>
+        <!-- 订单设置-运费 -->
+        <view class='orderPanel-item'>
+          <view class='orderPanel-item-title'>快递运费</view>
+          <view class='orderPanel-item-content' wx:if="{{order.postage != null}}">¥{{order.postage}}</view>
+          <view class='orderPanel-item-content' wx:if="{{order.postage == null}}">包邮</view>
+        </view>
+        <!-- 订单设置-优惠券 -->
+        <view class='orderPanel-item' hidden>
+          <view class='orderPanel-item-title'>使用优惠券</view>
+          <view class='orderPanel-item-content'>
+            暂无可用优惠券
+            <enter />
+          </view>
+        </view>
+        <!-- 订单设置-总计 -->
+        <view class='orderPanel-item orderPanel-item-total'>
+          <view class='orderPanel-item-content'>
+            共{{order.num_all}}件商品 小计:
+            <view class='orderPanel-item-price' wx:if='{{goods[0].category_id !=20}}'>{{order.goods_money}}</view>
+            <view class='orderPanel-item-price1' wx:if="{{goods[0].category_id == 20&&order.postage==null}}">{{order.goods_money}}积分</view>
+            <view class='orderPanel-item-price1' wx:if="{{goods[0].category_id == 20&&order.postage!=null}}">{{order.goods_money}}积分+{{order.postage}}元</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 留言 -->
+    <view class='orderPanel'>
+      <!-- 留言-标题 -->
+      <view class='orderPanel-header'>
+        买家留言
+        <input class='orderPanel-header-input' name='message' maxlength='45' placeholder='选填(45字以内)' />
+      </view>
+    </view>
+
+    <!-- 支付方式 -->
+    <view class='orderPanel'>
+      <view class='orderPanel-header'>
+        支付方式
+      </view>
+      <view class='orderPanel-content'>
+        <!-- 支付方式列表 -->
+        <view class='pay-list'>
+          <view class='pay-item'>
+            <view class='pay-item-title'>
+              <custom-image type='icon' src='/images/public/wechat.png' /> 微信支付
+            </view>
+            <view class='pay-item-content'>
+              <custom-radio value='{{true}}' readonly />
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 操作栏 -->
+    <view class='actionBar'>
+      <!-- 操作栏-标题 -->
+      <view class='actionBar-title'>
+        合计金额:
+        <view class='actionBar-price' wx:if='{{goods[0].category_id !=20}}'>{{order.goods_money}}</view>
+        <view class='actionBar-price1' wx:if="{{goods[0].category_id == 20&&order.postage == null}}">{{order.goods_money}}积分</view>
+        <view class='actionBar-price1' wx:if="{{goods[0].category_id == 20&&order.postage != null}}">{{order.goods_money}}积分+{{order.postage}}元</view>
+      </view>
+      <!-- 操作栏-结算 -->
+      <button form-type='submit' class='button-clear actionBar-submit'>提交订单</button>
+    </view>
+  </form>
+</container>

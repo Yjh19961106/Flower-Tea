@@ -1,0 +1,24 @@
+:host {
+  display: block;
+}
+/* 版面-标题 */
+.panel-title {
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+}
+.panel-title::before {
+  content: '';
+  display: block;
+  height: 30rpx;
+  width: 4rpx;
+  background-color: var(--main);
+  margin-right: 20rpx;
+}
+/* 版面-详情 */
+.panel-detail {
+}

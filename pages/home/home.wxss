@@ -1,0 +1,49 @@
+#container {
+  min-height: 100vh;
+}
+
+
+
+/* 轮播 */
+.swiper {
+  height: 408rpx;
+}
+.swiper custom-image {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* 横幅 */
+.banner {
+  width: 700rpx;
+  margin: 40rpx auto;
+}
+
+
+
+/* 菜单-列表 */
+.menu-list {
+  display: flex;
+  margin: 10rpx auto;
+  width: 700rpx;
+}
+/* 菜单-元素 */
+.menu-item {
+  flex: 1;
+  padding: 20rpx;
+}
+/* 菜单-图标 */
+.menu-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin: auto;
+}
+/* 菜单-标题 */
+.menu-title {
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  margin-top: 10rpx;
+}

@@ -1,0 +1,24 @@
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 服务-横幅 */
+.service-banner {
+  width: 750rpx;
+}
+
+/* 服务-列表 */
+.service-list {
+  flex: 1;
+}
+
+/* 服务-底部 */
+.service-footer {
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  padding: 20rpx;
+}

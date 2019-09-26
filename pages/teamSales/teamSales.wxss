@@ -1,0 +1,68 @@
+#container {
+  min-height: 100vh;
+}
+/* 团都销售-总额 */
+.teamSales-total {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 60rpx;
+  height: 250rpx;
+  justify-content: space-between;
+}
+/* 团都销售-总额-标题 */
+.teamSales-total-title {
+  font-size: 32rpx;
+  text-align: center;
+}
+/* 团都销售-总额-金额 */
+.teamSales-total-price {
+  font-size: 48rpx;
+  color: #d00914;
+  text-align: center;
+}
+.teamSales-total-price::before {
+  content: '¥';
+  font-size: 32rpx;
+}
+
+/* 团都销售-顶部 */
+.teamSales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  background-color: #F2F2F2;
+  font-size: 32rpx;
+  height: 80rpx;
+}
+/* 年份 */
+.year {
+  display: flex;
+  align-items: center;
+}
+/* 年份-更多 */
+.year-more {
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 团都销售-列表 */
+.teamSales-list {
+  
+}
+/* 团队销售-元素 */
+.teamSales-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  font-size: 32rpx;
+  height: 120rpx;
+}
+/* 团队销售-元素-金额 */
+.teamSales-item-price {
+  color: #d00914;
+}
+.teamSales-item-price::before {
+  content: '¥';
+}

@@ -1,0 +1,73 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.container {
+  background-color: #F2F2F2;
+  overflow: auto;
+}
+
+/* 折扣-元素 */
+.discount-item {
+  display: flex;
+  margin: 40rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #FFF;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.4);
+}
+/* 封面 */
+.discount-item-cover {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx;
+  flex-shrink: 0;
+}
+/* 左右布局 */
+.discount-item-wing {
+  display: flex;
+}
+/* 详情 */
+.discount-item-detail {
+  margin: 10rpx;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+/* 标题 */
+.discount-item-title {
+  font-size: 28rpx;
+}
+/* 标语 */
+.discount-item-slogan {
+  font-size: 24rpx;
+  flex-grow: 1;
+}
+/* 价格 */
+.discount-item-price {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+}
+/* 现价 */
+.discount-item-price-real {
+  font-size: 28rpx;
+  color: var(--main);
+}
+/* 原价 */
+.discount-item-price-tag {
+  font-size: 24rpx;
+  text-decoration: line-through;
+  margin-left: 10rpx;
+}
+/* 按钮 */
+.discount-item-button {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-right: 0;
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  color: #FFF;
+  background-image: linear-gradient(90deg, #f94b82, #f98e74);
+}

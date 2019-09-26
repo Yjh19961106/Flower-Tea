@@ -1,0 +1,31 @@
+/* 商品 */
+.goods {
+  display: flex;
+  background-color: #F8F8F8;
+  padding: 20rpx;
+}
+/* 商品-详情 */
+.goods-detail {
+  flex: 1;
+}
+/* 商品-封面 */
+.goods-cover {
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 20rpx;
+}
+/* 商品-标题 */
+.goods-title {
+  font-size: 28rpx;
+}
+/* 商品-分类 */
+.goods-category {
+  font-size: 24rpx;
+  color: #AAA;
+}
+/* 商品-统计 */
+.goods-count {
+  align-self: flex-end;
+  font-size: 28rpx;
+  color: #AAA;
+}

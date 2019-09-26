@@ -1,0 +1,5 @@
+<container id='container' binderror='init'>
+
+  <!-- 商品列表 -->
+  <goods-list data='{{goods.list}}' share='{{share}}' />
+</container>

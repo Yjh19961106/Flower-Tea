@@ -1,0 +1,143 @@
+page {
+  background-color: #F2F2F2;
+}
+#container {
+  min-height: 100vh;
+}
+
+/* 物流 */
+.logistical {
+  padding: 20rpx;
+  background-color: #FFF;
+  color: #ababab;
+  display: flex;
+  align-items: center;
+}
+/* 物流-图标 */
+.logistical-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+/* 物流-详情 */
+.logistical-detail {
+  flex: 1;
+  width: 0;
+}
+/* 物流-日期 */
+.logistical-date {
+  font-size: 28rpx;
+}
+/* 物流-内容 */
+.logistical-content {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 地址 */
+.address {
+  padding: 20rpx;
+  background-color: #FFF;
+}
+
+/* 订单 */
+.order {
+
+}
+/* 订单-详情 */
+.order-detail {
+  margin-top: 20rpx;
+}
+/* 订单-状态 */
+.order-status {
+  font-size: 28rpx;
+  padding: 30rpx;
+}
+/* 订单-日期 */
+.order-date {
+  padding: 30rpx;
+  font-size: 24rpx;
+  background-color: #FFF;
+}
+
+/* 订单面板 */
+.orderPanel {
+  background-color: #FFF;
+  margin: 15rpx 0;
+}
+/* 订单面板-顶部 */
+.orderPanel-header {
+  padding: 0 40rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  border-top: 2rpx solid #EEE;
+  border-bottom: 2rpx solid #EEE;
+  font-size: 24rpx;
+}
+/* 订单面板-顶部-输入 */
+.orderPanel-header-input {
+  flex: 1;
+  height: 100%;
+  margin-left: 20rpx;
+}
+/* 订单面板-列表 */
+.orderPanel-list {
+  border-bottom: 2rpx solid #EEE;
+  background-color: #FFF;
+}
+/* 订单面板-元素 */
+.orderPanel-item {
+  display: flex;
+  margin-left: 40rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+  align-items: center;
+}
+.orderPanel-item:not(:last-of-type) {
+  border-bottom: 2rpx solid #EEE;
+}
+/* 订单面板-元素-标题 */
+.orderPanel-item-title {
+  display: flex;
+  align-items: center;
+}
+.orderPanel-item-title-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+/* 订单面板-元素-内容 */
+.orderPanel-item-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15rpx;
+}
+/* 订单面板-元素-金额 */
+.orderPanel-item-price {
+  color: #ee3c53;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+.orderPanel-item-price::before {
+  content: '¥';
+}
+
+/* 订单底部 */
+.order-footer {
+  padding: 40rpx;
+  font-size: 24rpx;
+  background-color: #FFF;
+}
+.order-footer-item {
+  line-height: 40rpx;
+  color: #ababab;
+}
+.order-footer-item:not(:first-of-type) {
+  margin-top: 20rpx;
+}

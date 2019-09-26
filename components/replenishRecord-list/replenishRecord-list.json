@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-scroll": "/components/custom-scroll/custom-scroll",
+    "table": "/components/table/table",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

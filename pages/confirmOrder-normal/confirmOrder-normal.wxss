@@ -1,0 +1,178 @@
+page {
+  background-color: #F2F2F2;
+}
+#container {
+  min-height: 100vh;
+}
+
+/* 地址 */
+.address {
+  padding: 30rpx;
+  background-color: #FFF;
+}
+
+/* 订单面板 */
+.orderPanel {
+  background-color: #FFF;
+  margin: 15rpx 0;
+}
+/* 订单面板-顶部 */
+.orderPanel-header {
+  padding: 0 40rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  border-top: 2rpx solid #EEE;
+  border-bottom: 2rpx solid #EEE;
+  font-size: 24rpx;
+}
+/* 订单面板-顶部-输入 */
+.orderPanel-header-input {
+  flex: 1;
+  height: 100%;
+  margin-left: 20rpx;
+}
+/* 订单面板-列表 */
+.orderPanel-list {
+  border-bottom: 2rpx solid #EEE;
+  background-color: #FFF;
+}
+/* 订单面板-元素 */
+.orderPanel-item {
+  display: flex;
+  margin-left: 40rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+  align-items: center;
+  border-top: 2rpx solid #EEE;
+}
+/* 订单面板-元素-标题 */
+.orderPanel-item-title {
+  display: flex;
+  align-items: center;
+}
+.orderPanel-item-title-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+/* 订单面板-元素-内容 */
+.orderPanel-item-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15rpx;
+}
+/* 订单面板-元素-金额 */
+.orderPanel-item-price ,.orderPanel-item-price1 {
+  color: #ee3c53;
+  font-weight: bold;
+  margin-left: 20rpx;
+} 
+.orderPanel-item-price::before {
+  content: '¥';
+}
+
+/* 支付-列表 */
+.pay-list {
+  border-bottom: 2rpx solid #EEE;
+  background-color: #FFF;
+}
+/* 支付-元素 */
+.pay-item {
+  display: flex;
+  margin-left: 40rpx;
+  height: 80rpx;
+  font-size: 24rpx;
+  align-items: center;
+}
+.pay-item:not(:last-of-type) {
+  border-bottom: 2rpx solid #EEE;
+}
+/* 支付-元素-标题 */
+.pay-item-title {
+  display: flex;
+  align-items: center;
+}
+.pay-item-title custom-image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+/* 订单面板-元素-内容 */
+.pay-item-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 15rpx;
+}
+
+/* 商品 */
+.goods {
+  display: flex;
+  padding: 15rpx;
+}
+/* 商品-详情 */
+.goods-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15rpx;
+  flex: 1;
+}
+/* 商品-封面 */
+.goods-cover {
+  width: 140rpx;
+  height: 140rpx;
+}
+/* 商品-标题 */
+.goods-title {
+  font-size: 28rpx;
+}
+/* 商品-简介 */
+.goods-intro {
+  font-size: 24rpx;
+  color: #666;
+  flex: 1;
+  overflow: hidden;
+}
+/* 商品-规格 */
+.goods-specs {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 操作栏 */
+.actionBar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80rpx;
+  display: flex;
+  background-color: #FFF;
+}
+/* 操作栏-标题 */
+.actionBar-title {
+  flex: 1;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+/* 操作栏-金额 */
+.actionBar-price,.actionBar-price1 {
+  color: #ee3c53;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+.actionBar-price::before {
+  content: '¥';
+}
+.actionBar-submit {
+  width: 200rpx;
+  height: 80rpx;
+  background-color: var(--main);
+  color: #FFF;
+  font-size: 28rpx;
+}

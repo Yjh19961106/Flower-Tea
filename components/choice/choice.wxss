@@ -1,0 +1,20 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+/* 选择器-元素 */
+.choice-item {
+  color: #999;
+  border: 2rpx solid currentColor;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  padding: 0 10rpx;
+  margin: 10rpx;
+}
+/* 选择器-元素 */
+.choice-item-active {
+  color: var(--main);
+}

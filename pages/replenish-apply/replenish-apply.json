@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "补货申请",
+  "usingComponents": {
+    "count": "/components/count/count",
+    "chosePicture": "/components/chosePicture/chosePicture",
+    "custom-cart": "/components/custom-cart/custom-cart",
+    "caption": "/components/table/caption",
+    "table": "/components/table/table",
+    "thead": "/components/table/thead",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

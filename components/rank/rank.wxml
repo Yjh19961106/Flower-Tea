@@ -1,0 +1,1 @@
+<custom-image type='icon' class='rank-icon' src='/images/post-comment/{{index + 1<=value?"rank-active":"rank"}}.png' wx:key='{{index}}' wx:for='{{max}}' bindtap='changeRank' data-value='{{index + 1}}' />

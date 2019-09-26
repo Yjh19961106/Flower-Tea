@@ -1,0 +1,89 @@
+#container {
+  min-height: 100vh;
+  background-color: #F2F2F2;
+}
+/* 物流-顶部 */
+.logistical-header {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 20rpx;
+  background-color: #FFF;
+}
+/* 物流-顶部-图标 */
+.logistical-header-icon {
+  width: 50rpx;
+  height: 100%;
+  margin: 20rpx;
+}
+/* 物流-顶部-详情 */
+.logistical-header-detail {
+  flex: 1;
+  margin: 20rpx;
+}
+/* 物流-顶部-标题 */
+.logistical-header-title {
+  font-size: 28rpx;
+}
+/* 物流-顶部-序号 */
+.logistical-header-sn {
+  font-size: 28rpx;
+}
+
+/* 物流-中部 */
+.logistical-body {
+  margin-top: 20rpx;
+  background-color: #FFF;
+}
+/* 物流-中部-标题 */
+.logistical-body-title {
+  padding: 0 40rpx;
+  margin-left: 40rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #F2F2F2;
+}
+/* 物流-列表 */
+.logistical-list {
+}
+/* 物流-元素 */
+.logistical-item {
+  font-size: 28rpx;
+  display: flex;
+  margin: 0 20rpx;
+}
+/* 物流-元素-图标 */
+.logistical-item-icon {
+  position: relative;
+  margin: 0 20rpx;
+}
+.logistical-item-icon custom-image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 40rpx;
+}
+.logistical-item-icon::after {
+  content: '';
+  display: block;
+  width: 2rpx;
+  height: 100%;
+  margin: auto;
+  background-color: #F2F2F2;
+}
+/* 物流-元素-详情 */
+.logistical-item-detail {
+  flex: 1;
+  padding: 20rpx 0;
+  margin: 0 20rpx;
+}
+/* 物流-元素-日期 */
+.logistical-item-date {
+  color: #999;
+}
+/* 物流-元素-内容 */
+.logistical-item-content {
+  color: #999;
+}
+.logistical-item:first-of-type .logistical-item-content, .logistical-item:last-of-type .logistical-item-content {
+  color: #404040;
+}

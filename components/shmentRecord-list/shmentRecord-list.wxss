@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.container {
+  height: 100%;
+  background-color: #F2F2F2;
+}
+/* 转移记录-列表 */
+.transferRecord-list {
+  height: 100%;
+  background-color: #F2F2F2;
+}
+table {
+  width: calc(100% - 40rpx);
+  font-size: 24rpx;
+  background-color: #FFF;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 20rpx;
+  border-collapse:collapse;
+}
+td {
+  border: 2rpx solid #F2F2F2;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+td:first-of-type {
+  width: 200rpx;
+}

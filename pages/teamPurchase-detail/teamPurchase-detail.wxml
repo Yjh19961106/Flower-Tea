@@ -1,0 +1,23 @@
+<container id='container' binderror='init'>
+  <table>
+    <thead>
+      <tr>
+        <td>昵称</td>
+        <td>等级</td>
+        <td>月进货额</td>
+        <td>操作</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr wx:for='{{teamPurchase.list}}' wx:key='{{index}}' bindtap='enterDetail' data-id='{{item.id}}'>
+        <td>
+          <avatar class='avatar' src='{{item.avatar}}' />
+          <view class='nickname'>{{item.nickname}}</view>
+        </td>
+        <td>{{item.group_name}}</td>
+        <td>{{item.month_money}}</td>
+        <td><view class='enter'>TA的团队</view></td>
+      </tr>
+    </tbody>
+  </table>
+</container>

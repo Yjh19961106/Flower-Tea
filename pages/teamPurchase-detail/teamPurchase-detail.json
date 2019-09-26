@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "下级进货明细",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "avatar": "/components/avatar/avatar",
+    "table": "/components/table/table",
+    "thead": "/components/table/thead",
+    "tbody": "/components/table/tbody",
+    "tr": "/components/table/tr",
+    "td": "/components/table/td"
+  }
+}

@@ -1,0 +1,2 @@
+<!-- 视频 -->
+<video id='custom-video' class='custom-video' bindplay='play' src='{{src}}' poster='{{cover}}' controls></video>

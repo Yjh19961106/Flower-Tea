@@ -1,0 +1,17 @@
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.enter-container {
+  display: flex;
+  align-items: center;
+  color: #999
+}
+.enter-icon {
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  /* margin-left: 14rpx; */
+}
